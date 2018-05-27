@@ -6,13 +6,14 @@ pygmentsStyle = "trac"
 pygmentsUseClasses = true
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
+DisqusShortname = "shawn111"
 
 [Params]
   subtitle = "高雄Linux使用者協會 我們每月定期第四個週六下午聚會"
   logo = "img/kalug.png"
   favicon = "img/kalug.ico"
   dateFormat = "May 27, 2018"
-  commit = false
+  commit = true
   rss = true
   comments = true
   readingTime = true
