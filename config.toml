@@ -1,3 +1,48 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+baseurl = "http://kalug.github.io"
+title = "Kaohsiung Linux User Group"
+theme = "beautifulhugo"
+metaDataFormat = "yaml"
+pygmentsStyle = "trac"
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+
+[Params]
+  subtitle = "高雄Linux使用者協會 我們每月定期第四個週六下午聚會"
+  logo = "img/kalug.png"
+  favicon = "img/kalug.ico"
+  dateFormat = "May 27, 2018"
+  commit = false
+  rss = true
+  comments = true
+  readingTime = true
+  useHLJS = true
+  socialShare = true
+
+[Author]
+  website = "http://kalug.linux.org.tw"
+  # email = "youremail@domain.com"
+  facebook = "groups/kalug.tw"
+  github = "kalug"
+  telegram = "joinchat/Bqbim0F9EuW-GMUbYg9geA"
+
+[[menu.main]]
+    name = "Planet"
+    url = "planet/"
+    weight = 1
+
+[[menu.planet]]
+    name = "Tags"
+    url = "tags"
+    weight = 3
+
+[[menu.main]]
+    name = "Wiki"
+    url = "wiki/"
+    weight = 2
+
+[[menu.main]]
+    name = "About"
+    url = "page/about/"
+    weight = 3
+
