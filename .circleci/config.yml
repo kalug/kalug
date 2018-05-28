@@ -37,6 +37,7 @@ jobs:
             pushd venv/bin
               tar zxvf ../../hugo_0.41_Linux-64bit.tar.gz
             popd
+            git worktree add content origin/content
             hugo
 
       - save_cache:
