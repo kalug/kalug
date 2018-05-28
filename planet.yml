@@ -1,10 +1,10 @@
 - 
   id: appleboy
+  author: AppleBoy
   url: "https://blog.wu-boy.com/feed/"
   name: "小惡魔- 電腦技術- 工作筆記- AppleBOY"
-  email: appleboy.tw@gmail.com
 -
-  id: hychen
-  url: "xhttps://blog.wu-boy.com/feed/"
-  name: "x小惡魔- 電腦技術- 工作筆記- AppleBOY"
-  email: xappleboy.tw@gmail.com
+  id: qerter
+  author: qerter
+  url: "http://feeds.feedburner.com/qerter"
+  name: "後勁溪自由軟體雜誌社"
