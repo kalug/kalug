@@ -1,4 +1,4 @@
-baseurl = "http://kalug.github.io"
+baseurl = "https://kalug.github.io"
 title = "Kaohsiung Linux User Group"
 theme = "beautifulhugo"
 metaDataFormat = "yaml"
@@ -7,6 +7,7 @@ pygmentsUseClasses = true
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
 DisqusShortname = "shawn111"
+hasCJKLanguage = true
 
 [Params]
   subtitle = "高雄Linux使用者協會 我們每月定期第四個週六下午聚會"
@@ -26,6 +27,11 @@ DisqusShortname = "shawn111"
   facebook = "groups/kalug.tw"
   github = "kalug"
   telegram = "joinchat/Bqbim0F9EuW-GMUbYg9geA"
+
+[[menu.main]]
+    name = "Meetups"
+    url = "meetups/"
+    weight = 1
 
 [[menu.main]]
     name = "Planet"
