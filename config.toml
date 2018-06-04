@@ -1,4 +1,5 @@
 baseurl = "https://kalug.github.io"
+DefaultContentLanguage = "en"
 title = "Kaohsiung Linux User Group"
 theme = "beautifulhugo"
 metaDataFormat = "yaml"
@@ -9,11 +10,18 @@ pygmentsCodefencesGuessSyntax = true
 DisqusShortname = "shawn111"
 hasCJKLanguage = true
 
+[blackfriday]
+	# 讓 meetup 裡的 markdown 內容可以自動換行 
+	extensions = ["hardLineBreak"] 
+
 [Params]
   subtitle = "高雄Linux使用者協會 我們每月定期第四個週六下午聚會"
   logo = "img/kalug.png"
   favicon = "img/kalug.ico"
-  dateFormat = "May 27, 2018"
+
+  # hugo 的標準時間是 2006-01-02
+  dateFormat = "January 2, 2006"
+  
   commit = true
   rss = true
   comments = true
