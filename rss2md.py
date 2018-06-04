@@ -32,7 +32,7 @@ layout: post
 comments: true
 ---
 
-'''.format(title, strftime("%Y-%m-%dT%H:%M",tm), rss['author'], item['link']))
+'''.format(title, strftime("%Y-%m-%d",tm), rss['author'], item['link']))
         f.write(value)
         f.close()
 
