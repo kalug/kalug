@@ -42,12 +42,21 @@ jobs:
             git add .
             git commit -m "platnet update"
             git push origin content
+
+            git clone git@github.com:kalug/kalug.github.io.git public
+
             popd
             wget https://github.com/gohugoio/hugo/releases/download/v0.41/hugo_0.41_Linux-64bit.tar.gz
             pushd venv/bin
               tar zxvf ../../hugo_0.41_Linux-64bit.tar.gz
             popd
             hugo
+
+            pushd public
+            git add .
+            git commit -m "ci update"
+            git push origin master
+            pop
 
       - save_cache:
           paths:
