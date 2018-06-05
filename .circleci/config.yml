@@ -36,6 +36,11 @@ jobs:
             . venv/bin/activate
             pip install -r requirements.txt
             ./rss2md.py
+            pushd content
+            git add .
+            git commit -m "platnet update"
+            git push origin content
+            popd
             wget https://github.com/gohugoio/hugo/releases/download/v0.41/hugo_0.41_Linux-64bit.tar.gz
             pushd venv/bin
               tar zxvf ../../hugo_0.41_Linux-64bit.tar.gz
@@ -61,3 +66,7 @@ jobs:
       # - store_artifacts:
       #     path: test-reports
       #     destination: test-reports
+general:
+  branches:
+    only:
+      - master # list of branches to build
