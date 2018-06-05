@@ -8,7 +8,7 @@ layout: post
 comments: true
 ---
 
-<a href="https://www.flickr.com/photos/appleboy/26946324088/in/dateposted-public/" title="Screen Shot 2018-03-15 at 10.21.38 AM"><img alt="Screen Shot 2018-03-15 at 10.21.38 AM" src="https://i0.wp.com/farm1.staticflickr.com/790/26946324088_93725a917b_z.jpg?w=840&#038;ssl=1" /></a>
+<a href="https://www.flickr.com/photos/appleboy/26946324088/in/dateposted-public/" title="Screen Shot 2018-03-15 at 10.21.38 AM"><img src="https://i0.wp.com/farm1.staticflickr.com/790/26946324088_93725a917b_z.jpg?w=840&#038;ssl=1" alt="Screen Shot 2018-03-15 at 10.21.38 AM" data-recalc-dims="1" /></a>
 
 在更早以前我們怎麼實現縮圖機制，當使用者上傳一張檔案，後端會固定將圖片縮圖成各種前端網頁需要的大小，不管前端頁面是否有使用，後端都會先產生好，這有什麼缺陷？
 
@@ -64,12 +64,12 @@ server {
 <li>儲存圖片在使用者 browser 端</li>
 </ol>
 
-<a href="https://www.flickr.com/photos/appleboy/40809061222/in/dateposted-public/" title="Snip20180317_2"><img alt="Snip20180317_2" src="https://i1.wp.com/farm1.staticflickr.com/817/40809061222_088e694426_z.jpg?w=840&#038;ssl=1" /></a>
+<a href="https://www.flickr.com/photos/appleboy/40809061222/in/dateposted-public/" title="Snip20180317_2"><img src="https://i1.wp.com/farm1.staticflickr.com/817/40809061222_088e694426_z.jpg?w=840&#038;ssl=1" alt="Snip20180317_2" data-recalc-dims="1" /></a>
 
 到這邊會有個問題，假設有一萬個使用者在不同的地方同時連線，Nginx 就需要處理 1 萬次，可以直接用 <a href="https://github.com/tsenart/vegeta">vegeta</a> 來 Benchmark 試試看
 
 <pre class="brush: plain; title: ; notranslate">
-$ echo "GET http://localhost:8002/310/test/26946324088_5b3f0b1464_o.png" | vegeta attack -rate=100 -connections=1 -duration=1s | tee results.bin | vegeta report
+$ echo &quot;GET http://localhost:8002/310/test/26946324088_5b3f0b1464_o.png&quot; | vegeta attack -rate=100 -connections=1 -duration=1s | tee results.bin | vegeta report
 Requests      [total, rate]            100, 101.01
 Duration      [total, attack, wait]    8.258454731s, 989.999ms, 7.268455731s
 Latencies     [mean, 50, 95, 99, max]  3.937031678s, 4.079690985s, 6.958110121s, 7.205018428s, 7.268455731s
@@ -95,11 +95,11 @@ server {
   listen 8888;
 
   # Clean up the headers going to and from S3.
-  proxy_hide_header "x-amz-id-2";
-  proxy_hide_header "x-amz-request-id";
-  proxy_hide_header "x-amz-storage-class";
-  proxy_hide_header "Set-Cookie";
-  proxy_ignore_headers "Set-Cookie";
+  proxy_hide_header &quot;x-amz-id-2&quot;;
+  proxy_hide_header &quot;x-amz-request-id&quot;;
+  proxy_hide_header &quot;x-amz-storage-class&quot;;
+  proxy_hide_header &quot;Set-Cookie&quot;;
+  proxy_ignore_headers &quot;Set-Cookie&quot;;
 
   location ~ ^/([0-9]+)/(.*)$ {
     set $width $1;
@@ -145,7 +145,7 @@ services:
     image: minio/minio
     container_name: minio
     ports:
-      - "9000:9000"
+      - &quot;9000:9000&quot;
     volumes:
       - minio-data:/data
     environment:
@@ -157,7 +157,7 @@ services:
     image: appleboy/nginx-image-resizer
     container_name: image-resizer
     ports:
-      - "8002:80"
+      - &quot;8002:80&quot;
     environment:
       IMAGE_HOST: http://minio:9000
       NGINX_HOST: localhost
@@ -169,7 +169,7 @@ volumes:
 用 docker-compose up 可以將 nginx 及 minio 服務同時啟動，接著打開 http://localhost:9000 上傳圖片，再透過 <a href="https://github.com/tsenart/vegeta">vegeta</a> 測試數據:
 
 <pre class="brush: plain; title: ; notranslate">
-$ echo "GET http://localhost:8002/310/test/26946324088_5b3f0b1464_o.png" | vegeta attack -rate=100 -connections=1 -duration=1s | tee results.bin | vegeta report
+$ echo &quot;GET http://localhost:8002/310/test/26946324088_5b3f0b1464_o.png&quot; | vegeta attack -rate=100 -connections=1 -duration=1s | tee results.bin | vegeta report
 Requests      [total, rate]            100, 101.01
 Duration      [total, attack, wait]    993.312255ms, 989.998ms, 3.314255ms
 Latencies     [mean, 50, 95, 99, max]  3.717219ms, 3.05486ms, 8.891027ms, 12.488937ms, 12.520428ms
@@ -185,9 +185,9 @@ Error Set:
 <pre class="brush: plain; title: ; notranslate">
 $ docker run -e NGINX_PORT=8081 \
   -e NGINX_HOST=localhost \
-  -e IMAGE_HOST="http://localhost:9000" \
+  -e IMAGE_HOST=&quot;http://localhost:9000&quot; \
   appleboy/nginx-image-resizer
 </pre>
 
 <h1>程式碼請參考 <a href="https://github.com/appleboy/nginx-image-resizer">nginx-image-resizer</a></h1>
-<div class="wp_rp_wrap  wp_rp_plain"><div class="wp_rp_content"><h3 class="related_post_title">Related View</h3><ul class="related_post wp_rp"><li><a class="wp_rp_title" href="https://blog.wu-boy.com/2012/11/nginx-check-if-file-exists/">Nginx 判斷檔案是否存在</a><small class="wp_rp_comments_count"> (0)</small><br /></li><li><a class="wp_rp_title" href="https://blog.wu-boy.com/2013/06/force-phpmyadmin-ssl-with-nginx/">Nginx + phpMyAdmin 搭配 SSL 設定</a><small class="wp_rp_comments_count"> (2)</small><br /></li><li><a class="wp_rp_title" href="https://blog.wu-boy.com/2014/06/ngnix-php5-fpm-sock-failed-permission-denied/">Ngnix 搭配 PHP-FPM 噴 php5-fpm.sock failed (13: Permission denied)</a><small class="wp_rp_comments_count"> (0)</small><br /></li><li><a class="wp_rp_title" href="https://blog.wu-boy.com/2017/11/migrate-nginx-to-caddy/">從 Nginx 換到 Caddy</a><small class="wp_rp_comments_count"> (5)</small><br /></li><li><a class="wp_rp_title" href="https://blog.wu-boy.com/2017/04/1-line-letsencrypt-https-servers-in-golang/">在 Go 語言用一行程式碼自動化安裝且更新 Let’s Encrypt 憑證</a><small class="wp_rp_comments_count"> (1)</small><br /></li><li><a class="wp_rp_title" href="https://blog.wu-boy.com/2012/05/php-fastcgi-with-nginx-on-ubuntu-10-10-maverick/">在 Ubuntu 10.10 (Maverick) 架設 Nginx + PHP FastCGI</a><small class="wp_rp_comments_count"> (3)</small><br /></li><li><a class="wp_rp_title" href="https://blog.wu-boy.com/2013/11/jenkins-nginx-auth/">Jenkins + Nginx User Auth</a><small class="wp_rp_comments_count"> (1)</small><br /></li><li><a class="wp_rp_title" href="https://blog.wu-boy.com/2016/10/website-support-http2-using-letsencrypt/">申請 Let&#8217;s Encrypt 免費憑證讓網站支援 HTTP2</a><small class="wp_rp_comments_count"> (1)</small><br /></li><li><a class="wp_rp_title" href="https://blog.wu-boy.com/2013/04/install-nginx-spdy-module-on-ubuntu-or-debian/">Install Nginx + spdy module on Ubuntu or Debian</a><small class="wp_rp_comments_count"> (0)</small><br /></li><li><a class="wp_rp_title" href="https://blog.wu-boy.com/2013/04/nginx-1-4-0-support-spdy-module/">nginx 1.4.0 釋出並支援 SPDY</a><small class="wp_rp_comments_count"> (4)</small><br /></li></ul></div></div>
+<div class="wp_rp_wrap  wp_rp_plain" ><div class="wp_rp_content"><h3 class="related_post_title">Related View</h3><ul class="related_post wp_rp"><li data-position="0" data-poid="in-3691" data-post-type="none" ><a href="https://blog.wu-boy.com/2012/11/nginx-check-if-file-exists/" class="wp_rp_title">Nginx 判斷檔案是否存在</a><small class="wp_rp_comments_count"> (0)</small><br /></li><li data-position="1" data-poid="in-4234" data-post-type="none" ><a href="https://blog.wu-boy.com/2013/06/force-phpmyadmin-ssl-with-nginx/" class="wp_rp_title">Nginx + phpMyAdmin 搭配 SSL 設定</a><small class="wp_rp_comments_count"> (2)</small><br /></li><li data-position="2" data-poid="in-5402" data-post-type="none" ><a href="https://blog.wu-boy.com/2014/06/ngnix-php5-fpm-sock-failed-permission-denied/" class="wp_rp_title">Ngnix 搭配 PHP-FPM 噴 php5-fpm.sock failed (13: Permission denied)</a><small class="wp_rp_comments_count"> (0)</small><br /></li><li data-position="3" data-poid="in-6899" data-post-type="none" ><a href="https://blog.wu-boy.com/2017/11/migrate-nginx-to-caddy/" class="wp_rp_title">從 Nginx 換到 Caddy</a><small class="wp_rp_comments_count"> (5)</small><br /></li><li data-position="4" data-poid="in-6683" data-post-type="none" ><a href="https://blog.wu-boy.com/2017/04/1-line-letsencrypt-https-servers-in-golang/" class="wp_rp_title">在 Go 語言用一行程式碼自動化安裝且更新 Let’s Encrypt 憑證</a><small class="wp_rp_comments_count"> (1)</small><br /></li><li data-position="5" data-poid="in-3496" data-post-type="none" ><a href="https://blog.wu-boy.com/2012/05/php-fastcgi-with-nginx-on-ubuntu-10-10-maverick/" class="wp_rp_title">在 Ubuntu 10.10 (Maverick) 架設 Nginx + PHP FastCGI</a><small class="wp_rp_comments_count"> (3)</small><br /></li><li data-position="6" data-poid="in-4698" data-post-type="none" ><a href="https://blog.wu-boy.com/2013/11/jenkins-nginx-auth/" class="wp_rp_title">Jenkins + Nginx User Auth</a><small class="wp_rp_comments_count"> (1)</small><br /></li><li data-position="7" data-poid="in-6548" data-post-type="none" ><a href="https://blog.wu-boy.com/2016/10/website-support-http2-using-letsencrypt/" class="wp_rp_title">申請 Let&#8217;s Encrypt 免費憑證讓網站支援 HTTP2</a><small class="wp_rp_comments_count"> (1)</small><br /></li><li data-position="8" data-poid="in-4179" data-post-type="none" ><a href="https://blog.wu-boy.com/2013/04/install-nginx-spdy-module-on-ubuntu-or-debian/" class="wp_rp_title">Install Nginx + spdy module on Ubuntu or Debian</a><small class="wp_rp_comments_count"> (0)</small><br /></li><li data-position="9" data-poid="in-4157" data-post-type="none" ><a href="https://blog.wu-boy.com/2013/04/nginx-1-4-0-support-spdy-module/" class="wp_rp_title">nginx 1.4.0 釋出並支援 SPDY</a><small class="wp_rp_comments_count"> (4)</small><br /></li></ul></div></div>

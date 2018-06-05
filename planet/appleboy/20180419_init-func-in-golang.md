@@ -8,7 +8,7 @@ layout: post
 comments: true
 ---
 
-<a href="https://www.flickr.com/photos/appleboy/24407557644/in/dateposted-public/" title="Go-brown-side.sh"><img alt="Go-brown-side.sh" src="https://i1.wp.com/farm2.staticflickr.com/1622/24407557644_36087ca6de.jpg?w=840&#038;ssl=1" /></a>
+<a href="https://www.flickr.com/photos/appleboy/24407557644/in/dateposted-public/" title="Go-brown-side.sh"><img src="https://i1.wp.com/farm2.staticflickr.com/1622/24407557644_36087ca6de.jpg?w=840&#038;ssl=1" alt="Go-brown-side.sh" data-recalc-dims="1" /></a>
 
 本篇會帶大家認識 <a href="https://golang.org">Go 語言</a>的 init 函式，在了解 init func 之前，大家應該都知道在同一個 Package 底下是不可以有重複的變數或者是函式名稱，但是唯獨 init() 可以在同一個 package 內宣告多次都沒問題。底下看<a href="https://play.golang.org/p/AN-6MK4qVVL">例子</a>，可以發現的是不管宣告多少次，都會依序從最初宣告到最後宣告依序執行下來。
 
@@ -16,19 +16,19 @@ comments: true
 package main
 
 import (
-    "fmt"
+    &quot;fmt&quot;
 )
 
 func init() {
-    fmt.Println("init 1")
+    fmt.Println(&quot;init 1&quot;)
 }
 
 func init() {
-    fmt.Println("init 2")
+    fmt.Println(&quot;init 2&quot;)
 }
 
 func main() {
-    fmt.Println("Hello, playground")
+    fmt.Println(&quot;Hello, playground&quot;)
 }
 </pre>
 
@@ -41,7 +41,7 @@ func main() {
 <pre class="brush: go; title: ; notranslate">
 import(
     // Needed for the Postgresql driver
-    _ "github.com/lib/pq
+    _ &quot;github.com/lib/pq
 )
 </pre>
 
@@ -63,7 +63,7 @@ func init() {
 }
 
 func main() {
-    fmt.Println("global is", global)
+    fmt.Println(&quot;global is&quot;, global)
 }
 </pre>
 
@@ -81,7 +81,7 @@ func convert() int {
 }
 
 func main() {
-    fmt.Println("global is", global)
+    fmt.Println(&quot;global is&quot;, global)
 }
 </pre>
 
@@ -89,11 +89,11 @@ func main() {
 
 <h2>線上影片</h2>
 
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WXMUWMsRTjQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 <hr />
 
 Go 語言線上課程目前特價 $1600，持續錄製中，每週都會有新的影片上架，歡迎大家參考看看，請點選底下購買連結:
 
 <h1><a href="http://bit.ly/intro-golang">點我購買</a></h1>
-<div class="wp_rp_wrap  wp_rp_plain"><div class="wp_rp_content"><h3 class="related_post_title">Related View</h3><ul class="related_post wp_rp"><li><a class="wp_rp_title" href="https://blog.wu-boy.com/2017/03/error-handler-in-golang/">Go 語言的錯誤訊息處理</a><small class="wp_rp_comments_count"> (0)</small><br /></li><li><a class="wp_rp_title" href="https://blog.wu-boy.com/2016/05/package-management-for-golang-glide/">Golang 套件管理工具 Glide</a><small class="wp_rp_comments_count"> (2)</small><br /></li><li><a class="wp_rp_title" href="https://blog.wu-boy.com/2018/01/write-golang-in-aws-lambda/">在 AWS Lambda 上寫 Go 語言搭配 API Gateway</a><small class="wp_rp_comments_count"> (3)</small><br /></li><li><a class="wp_rp_title" href="https://blog.wu-boy.com/2017/05/go-struct-method-pointer-or-value/">Go 語言內 struct methods 該使用 pointer 或 value 傳值?</a><small class="wp_rp_comments_count"> (1)</small><br /></li><li><a class="wp_rp_title" href="https://blog.wu-boy.com/2017/02/write-command-line-in-golang/">用 Golang 寫 Command line 工具</a><small class="wp_rp_comments_count"> (1)</small><br /></li><li><a class="wp_rp_title" href="https://blog.wu-boy.com/2017/07/go-framework-gin-release-v1-2/">Go 語言框架 Gin 終於發佈 v1.2 版本</a><small class="wp_rp_comments_count"> (2)</small><br /></li><li><a class="wp_rp_title" href="https://blog.wu-boy.com/2017/03/golang-dependency-management-tool-dep/">Go 語言官方推出的 dep 使用心得</a><small class="wp_rp_comments_count"> (6)</small><br /></li><li><a class="wp_rp_title" href="https://blog.wu-boy.com/2016/07/new-coverage-service-codecov-io/">新的 code coverage 線上服務 codecov.io</a><small class="wp_rp_comments_count"> (0)</small><br /></li><li><a class="wp_rp_title" href="https://blog.wu-boy.com/2017/04/build-minimal-docker-container-using-multi-stage-for-go-app/">用 Docker Multi-Stage 編譯出 Go 語言最小 Image</a><small class="wp_rp_comments_count"> (1)</small><br /></li><li><a class="wp_rp_title" href="https://blog.wu-boy.com/2016/11/golang-gofight-support-echo-framework/">輕量級 Gofight 支援 Echo 框架測試</a><small class="wp_rp_comments_count"> (0)</small><br /></li></ul></div></div>
+<div class="wp_rp_wrap  wp_rp_plain" ><div class="wp_rp_content"><h3 class="related_post_title">Related View</h3><ul class="related_post wp_rp"><li data-position="0" data-poid="in-6671" data-post-type="none" ><a href="https://blog.wu-boy.com/2017/03/error-handler-in-golang/" class="wp_rp_title">Go 語言的錯誤訊息處理</a><small class="wp_rp_comments_count"> (0)</small><br /></li><li data-position="1" data-poid="in-6342" data-post-type="none" ><a href="https://blog.wu-boy.com/2016/05/package-management-for-golang-glide/" class="wp_rp_title">Golang 套件管理工具 Glide</a><small class="wp_rp_comments_count"> (2)</small><br /></li><li data-position="2" data-poid="in-6953" data-post-type="none" ><a href="https://blog.wu-boy.com/2018/01/write-golang-in-aws-lambda/" class="wp_rp_title">在 AWS Lambda 上寫 Go 語言搭配 API Gateway</a><small class="wp_rp_comments_count"> (3)</small><br /></li><li data-position="3" data-poid="in-6721" data-post-type="none" ><a href="https://blog.wu-boy.com/2017/05/go-struct-method-pointer-or-value/" class="wp_rp_title">Go 語言內 struct methods 該使用 pointer 或 value 傳值?</a><small class="wp_rp_comments_count"> (1)</small><br /></li><li data-position="4" data-poid="in-6661" data-post-type="none" ><a href="https://blog.wu-boy.com/2017/02/write-command-line-in-golang/" class="wp_rp_title">用 Golang 寫 Command line 工具</a><small class="wp_rp_comments_count"> (1)</small><br /></li><li data-position="5" data-poid="in-6772" data-post-type="none" ><a href="https://blog.wu-boy.com/2017/07/go-framework-gin-release-v1-2/" class="wp_rp_title">Go 語言框架 Gin 終於發佈 v1.2 版本</a><small class="wp_rp_comments_count"> (2)</small><br /></li><li data-position="6" data-poid="in-6674" data-post-type="none" ><a href="https://blog.wu-boy.com/2017/03/golang-dependency-management-tool-dep/" class="wp_rp_title">Go 語言官方推出的 dep 使用心得</a><small class="wp_rp_comments_count"> (6)</small><br /></li><li data-position="7" data-poid="in-6452" data-post-type="none" ><a href="https://blog.wu-boy.com/2016/07/new-coverage-service-codecov-io/" class="wp_rp_title">新的 code coverage 線上服務 codecov.io</a><small class="wp_rp_comments_count"> (0)</small><br /></li><li data-position="8" data-poid="in-6714" data-post-type="none" ><a href="https://blog.wu-boy.com/2017/04/build-minimal-docker-container-using-multi-stage-for-go-app/" class="wp_rp_title">用 Docker Multi-Stage 編譯出 Go 語言最小 Image</a><small class="wp_rp_comments_count"> (1)</small><br /></li><li data-position="9" data-poid="in-6597" data-post-type="none" ><a href="https://blog.wu-boy.com/2016/11/golang-gofight-support-echo-framework/" class="wp_rp_title">輕量級 Gofight 支援 Echo 框架測試</a><small class="wp_rp_comments_count"> (0)</small><br /></li></ul></div></div>
