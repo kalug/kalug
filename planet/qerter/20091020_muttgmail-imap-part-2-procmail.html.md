@@ -1,0 +1,11 @@
+---
+title: "使用Mutt收GMail IMAP電子郵件, Part 2 Procmail篇"
+date: 2009-10-20
+type: blog
+author: qerter
+link: http://feedproxy.google.com/~r/qerter/~3/c4ZFbTDRvhM/muttgmail-imap-part-2-procmail.html
+layout: post
+comments: true
+---
+
+在Part 1 <a href="http://qerter.blogspot.com/2009/10/muttgmail-imap.html">[使用Mutt收GMail IMAP電子郵件, Part 1 基礎設定篇]</a> 的文章後，我開始接觸使用Mutt這個方便快速的收信軟體來管理我的電子郵件。經過一段使用Mutt時間過後才漸漸發現Mutt是個深度而卓越的郵件軟體，自訂程度高，輕巧且彈性。<br /><br />日前碰到了困擾，有些信件是之前訂閱的Mailing List或電子報，固定時間就會寄送郵件過來，而我並不是每次開啟信件時都願意讀這些Mailing List Post 或電子報，只想先回覆重要的信件，有空閒時間再開啟這些Post細讀。<br /><br />我希望能夠有個預先分類的機制，幫我將這些Mailing List Post或電子報的電子郵件做分類，並且透過一些郵件規則過濾掉垃圾信。<br /><br />Procmail 便是為此目的而生的，它可以搭配fetchmail與Mutt進行郵件預先過濾與分類信件。<br /><br />安裝Procmail後，接下來要設定fetchmail與procmail搭配。<br /><br />設定家目錄下的.fetchmailrc，加入下行。<br /><br /><code>mda '/usr/bin/procmail -d %T'</code><br /><br />編輯家目錄下的.procmailrc，參考Debian procmail套件的範例檔(/usr/share/doc/procmail/example/1procmailrc)<br /><code><br />PATH=$HOME/bin:/usr/bin:/usr/ucb:/bin:/usr/local/bin:.<br />MAILDIR=$HOME/Mail      # You'd better make sure it exists<br />DEFAULT=$MAILDIR/mbox<br />LOGFILE=$MAILDIR/from<br />LOCKFILE=$HOME/.lockmail<br /><br />:0                              # Anything from thf<br />* ^From.*thf@somewhere.someplace<br />todd                            # will go to $MAILDIR/todd<br /><br />:0                              # Anything from people at uunet<br />* ^To.*@uunet<br />uunetbox                        # will go to $MAILDIR/uunetbox<br /><br />:0                              # Anything from Henry<br />* ^Subject.*hello<br />/dev/null                       # will go to /dev/null<br /><br /></code><br /><br />透過這樣的設定，我們執行fetchmail時，符合procmailrc規則的信件會放入設定的mailbox檔案中(e.g. $MAILDIR/todd)，其餘則放入預設的$MAILDIR/mbox檔案中。<br /><br />而Mutt設定檔中我們新增兩行設定<br /><code><br />set spoolfile=~/Mail/mbox<br />mailboxes mbox todd uunetbox<br /></code><br /><br />第一行 set spool file可以讓mutt預設執行時開啟家目錄下的Mail/mbox，瀏覽信件。第二行則是告訴Mutt我們有哪些Mailbox檔案，在Mutt執行時只需要按c鍵就可切換Mailbox檔案瀏覽。<br /><br />使用Mutt收發信件越來越有趣，搭配其他軟體工具也越來越上手了呢。
