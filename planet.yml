@@ -1,4 +1,4 @@
-- 
+-
   id: appleboy
   author: AppleBoy
   url: "https://blog.wu-boy.com/feed/"
@@ -8,3 +8,8 @@
   author: qerter
   url: "http://feeds.feedburner.com/qerter"
   name: "後勁溪自由軟體雜誌社"
+-
+  id: chusiang
+  author: 凍仁翔
+  url: "http://note.drx.tw/feeds/posts/default"
+  name: "凍仁的筆記"
