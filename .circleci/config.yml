@@ -31,7 +31,9 @@ jobs:
           name: install dependencies
           command: |
             git --version
-            git worktree add content origin/content
+            git config --global user.name "CI"
+            git config --global user.email "circleci@kalug.linux.org.tw"
+            git worktree add content origin/content -b content
             python3 -m venv venv
             . venv/bin/activate
             pip install -r requirements.txt
