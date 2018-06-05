@@ -30,15 +30,16 @@ jobs:
       - run:
           name: install dependencies
           command: |
+            git --version
+            git worktree add content origin/content
             python3 -m venv venv
             . venv/bin/activate
             pip install -r requirements.txt
+            ./rss2md.py
             wget https://github.com/gohugoio/hugo/releases/download/v0.41/hugo_0.41_Linux-64bit.tar.gz
             pushd venv/bin
               tar zxvf ../../hugo_0.41_Linux-64bit.tar.gz
             popd
-            git --version
-            git worktree add content origin/content
             hugo
 
       - save_cache:
