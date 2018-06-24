@@ -21,6 +21,9 @@ jobs:
       - run:
           name: checkout
           command: |
+            mkdir -p ~/.ssh     
+            echo "Host *" > ~/.ssh/config     
+            echo " StrictHostKeyChecking no" >> ~/.ssh/config
             git --version
             git clone -b build git@github.com:kalug/kalug.git ~/repo
             git worktree add content origin/master -b master
