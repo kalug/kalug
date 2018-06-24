@@ -48,7 +48,7 @@ jobs:
             pushd content
             git add .
             git commit -m "platnet update"
-            git push origin content
+            git push origin master
             popd
             wget https://github.com/gohugoio/hugo/releases/download/v0.41/hugo_0.41_Linux-64bit.tar.gz
             pushd venv/bin
