@@ -7,7 +7,7 @@ pygmentsStyle = "trac"
 pygmentsUseClasses = true
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
-DisqusShortname = "shawn111"
+DisqusShortname = "kalug-linux-org-tw"
 hasCJKLanguage = true
 
 [blackfriday]
@@ -15,7 +15,7 @@ hasCJKLanguage = true
 	extensions = ["hardLineBreak"] 
 
 [Params]
-  subtitle = "高雄Linux使用者協會 我們每月定期第四個週六下午聚會"
+  #subtitle = "高雄Linux使用者協會 我們每月定期第四個週六下午聚會"
   logo = "img/kalug.png"
   favicon = "img/kalug.ico"
 
@@ -52,12 +52,41 @@ hasCJKLanguage = true
     weight = 3
 
 [[menu.main]]
-    name = "Wiki"
-    url = "wiki/"
+    identifier = "pages"
+    name = "Pages"
     weight = 2
 
 [[menu.main]]
-    name = "About"
-    url = "page/about/"
+    parent = "pages"
+    name = "Special Interest Group"
+    url = "pages/sig"
+    weight = 1
+
+[[menu.main]]
+    parent = "pages"
+    name = "Useful Devices"
+    url = "pages/UsefulDevices"
+    weight = 2
+
+[[menu.main]]
+    parent = "pages"
+    name = "Kaohsiung Life"
+    url = "pages/Kaohsiung"
     weight = 3
 
+[[menu.main]]
+    identifier = "about"
+    name = "About"
+    weight = 3
+
+[[menu.main]]
+    parent = "about"
+    name = "us"
+    url = "about/us"
+    weight = 1
+
+[[menu.main]]
+    parent = "about"
+    name = "Sponsors"
+    url = "about/sponsors"
+    weight = 2
