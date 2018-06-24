@@ -67,4 +67,5 @@ jobs:
 general:
   branches:
     only:
-      - build # list of branches to build
+      - build
+      - master # content & circle ci - config
