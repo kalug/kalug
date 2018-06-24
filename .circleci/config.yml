@@ -22,7 +22,7 @@ jobs:
           name: checkout
           command: |
             mkdir -p ~/.ssh     
-            echo "Host *" > ~/.ssh/config     
+            echo "Host *" >> ~/.ssh/config     
             echo " StrictHostKeyChecking no" >> ~/.ssh/config
             git --version
             git clone -b build git@github.com:kalug/kalug.git ~/repo
