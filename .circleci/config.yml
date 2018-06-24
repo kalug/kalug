@@ -1,0 +1,95 @@
+# Python CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-python/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+      # use `-browsers` prefix for selenium tests, e.g. `3.6.1-browsers`
+      - image: circleci/python:3.6.5-stretch
+      
+      # Specify service dependencies here if necessary
+      # CircleCI maintains a library of pre-built images
+      # documented at https://circleci.com/docs/2.0/circleci-images/
+      # - image: circleci/postgres:9.4
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "requirements.txt" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      - run:
+          name: install dependencies
+          command: |
+            git --version
+            git config --global user.name "CI"
+            git config --global user.email "circleci@kalug.linux.org.tw"
+            git worktree add content origin/master -b master
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install -r requirements.txt
+            ./rss2md.py
+            pushd content
+            git add .
+            git commit -m "platnet update"
+            git push origin content
+            popd
+            wget https://github.com/gohugoio/hugo/releases/download/v0.41/hugo_0.41_Linux-64bit.tar.gz
+            pushd venv/bin
+              tar zxvf ../../hugo_0.41_Linux-64bit.tar.gz
+            popd
+
+            git clone git@github.com:kalug/kalug.github.io.git public
+
+            hugo
+
+            pushd public
+            git add .
+            git commit -m "ci update"
+            git push origin master
+            popd
+
+      - save_cache:
+          paths:
+            - ./venv
+          key: v1-dependencies-{{ checksum "requirements.txt" }}
+        
+      # run tests!
+      # this example uses Django's built-in test-runner
+      # other common Python testing frameworks include pytest and nose
+      # https://pytest.org
+      # https://nose.readthedocs.io
+      # - run:
+      #     name: run tests
+      #     command: |
+      #       . venv/bin/activate
+      #       python manage.py test
+
+      # - store_artifacts:
+      #     path: test-reports
+      #     destination: test-reports
+general:
+  branches:
+    only:
+      - build # list of branches to build
+workflows:
+   version: 2
+   nightly:
+     triggers:
+       - schedule:
+           cron: "0 0 * * *"
+           filters:
+             branches:
+               only:
+                 - build
+     jobs:
+       - build
