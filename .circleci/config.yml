@@ -18,22 +18,29 @@ jobs:
     working_directory: ~/repo
 
     steps:
-      - checkout
-
-      # Download and cache dependencies
+      - run:
+          name: checkout
+          command: |
+            git --version
+            git clone -b build http://github.com/kalug/kalug ~/repo
+            git worktree add content origin/master -b master
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "requirements.txt" }}
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
+      - save_cache:
+          paths:
+            - ./venv
+          key: v1-dependencies-{{ checksum "requirements.txt" }}
+
       - run:
-          name: install dependencies
+          name: run build
           command: |
             git --version
             git config --global user.name "CI"
             git config --global user.email "circleci@kalug.linux.org.tw"
-            git worktree add content origin/master -b master
             python3 -m venv venv
             . venv/bin/activate
             pip install -r requirements.txt
@@ -57,26 +64,6 @@ jobs:
             git commit -m "ci update"
             git push origin master
             popd
-
-      - save_cache:
-          paths:
-            - ./venv
-          key: v1-dependencies-{{ checksum "requirements.txt" }}
-        
-      # run tests!
-      # this example uses Django's built-in test-runner
-      # other common Python testing frameworks include pytest and nose
-      # https://pytest.org
-      # https://nose.readthedocs.io
-      # - run:
-      #     name: run tests
-      #     command: |
-      #       . venv/bin/activate
-      #       python manage.py test
-
-      # - store_artifacts:
-      #     path: test-reports
-      #     destination: test-reports
 general:
   branches:
     only:
