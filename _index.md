@@ -9,6 +9,6 @@
  - 捷運請搭至 R11 高雄車站 需步行至 高雄車站後站
  - 未來才有 臺鐵民族站
 
-本網站目前以Hugo重新整理中, 未來將改用kalug.linux.org.tw 為domain.
+歡迎點 Edit me 幫忙修改內文
 
 {{< edit_me >}}
