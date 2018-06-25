@@ -1,4 +1,5 @@
 # Useful Devices
+{{< edit_me >}}
 
 ## Laptop
 

@@ -10,3 +10,5 @@
  - 未來才有 臺鐵民族站
 
 本網站目前以Hugo重新整理中, 未來將改用kalug.linux.org.tw 為domain.
+
+{{< edit_me >}}
