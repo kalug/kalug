@@ -48,25 +48,23 @@ jobs:
             . venv/bin/activate
             pip install -r requirements.txt
             ./rss2md.py
-            # pushd content
-            # git add .
-            # git commit -m "platnet update"
-            # git push origin master
-            # popd
+
+            pushd content
+            git add .
+            git commit -m "platnet update"
+            git push origin master
+            popd
+
             wget https://github.com/gohugoio/hugo/releases/download/v0.41/hugo_0.41_Linux-64bit.tar.gz
             pushd venv/bin
               tar zxvf ../../hugo_0.41_Linux-64bit.tar.gz
             popd
 
-            git clone git@github.com:kalug/kalug.github.io.git public
+            #git clone git@github.com:kalug/kalug.github.io.git public
 
             hugo
 
-            pushd public
-            git add .
-            git commit -m "ci update"
-            git push origin master
-            popd
+            scp -r public/* shawn@kalug.linux.org.tw:/var/www/lighttpd-www/hugo/public
 general:
   branches:
     only:
