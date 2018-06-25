@@ -65,13 +65,13 @@ hasCJKLanguage = true
 [[menu.main]]
     parent = "pages"
     name = "Useful Devices"
-    url = "pages/UsefulDevices"
+    url = "pages/devices"
     weight = 2
 
 [[menu.main]]
     parent = "pages"
     name = "Kaohsiung Life"
-    url = "pages/Kaohsiung"
+    url = "pages/life"
     weight = 3
 
 [[menu.main]]
