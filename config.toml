@@ -1,4 +1,4 @@
-baseurl = "https://kalug.linux.org.tw"
+baseurl = "http://kalug.linux.org.tw"
 DefaultContentLanguage = "en"
 title = "Kaohsiung Linux User Group"
 theme = "beautifulhugo"
