@@ -13,8 +13,10 @@ build branch: configs/layouts/themes of hugo
 
 ## How To Contribute
 
-歡迎一起豐富網站內容, 可以直接修改 content branch
-比如想要改 首頁 (content/_index.md)
+歡迎一起豐富網站內容, 可以直接修改 master branch
+比如想要改 首頁 (_index.md)
+
+在content頁面上 加上 {{< edit_me >}} 就可以產生 Edit me的button 連結github讓大家比較好編輯
 
 可以直接透過 github的edit 功能直接修改
 https://github.com/kalug/kalug/blob/content/_index.md
