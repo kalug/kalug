@@ -1,6 +1,6 @@
 聚會時間: 每月第四周 PM2:00~PM5:30, 會後通常有大食團 歡迎跟團
 
-7/28, 8/25, 9/29, 10/27, 11/24, 12/22
+[7/28](https://kalug.kktix.cc/events/1807), [8/25](https://kalug.kktix.cc/events/1808), [9/29](https://kalug.kktix.cc/events/1809), 10/27, 11/24, 12/22
 
 聚會地點: Tady Coffee 高雄市三民區旅順街8號
  - 大眾運輸 交通方式 高雄車站 後站
