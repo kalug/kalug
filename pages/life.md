@@ -7,10 +7,14 @@
 - 高雄軟體園區
 - 加工出口區(?) 不確定有沒有軟體公司
 - [幸福高雄移居津貼](http://labor.kcg.gov.tw/LaborBenefit/Welfare/welfare02.htm)
+- 遠端工作
+
 ### Best Practice
+
 #### 開公司
  - [funmula](http://funmula.com/)/[biggo](http://biggo.com.tw)
  - [webduino](https://webduino.io/)
+
 #### 說服老闆開南部分公司
  - KKBOX 高雄分公司 高軟
  - QNAP 四維路
