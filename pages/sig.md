@@ -21,13 +21,13 @@
  - 成員: Hawk, Shawn, Rick
  - 每三個月
  - 外部社群:
-   - (Gopher Taipei)[https://t.me/golangtw]
+   - [Gopher Taipei](https://t.me/golangtw)
 
 ## Javascript/前端
  - 成員: 丁丁
   - 外部社群:
    - 高雄前端
-   - (好想工作室)[http://goodideas-studio.com/]
+   - [好想工作室](http://goodideas-studio.com/)
 
 ## Security
  - 成員: Lightwind
@@ -37,7 +37,7 @@
 ## DevOps
  - 成員: Robert, CCChen
  - 外部社群:
-   - (DevOps台灣)[https://t.me/devopstw]
+   - [DevOps台灣](https://t.me/devopstw)
 
  
 
