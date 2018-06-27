@@ -26,7 +26,7 @@
 ## Javascript/前端
  - 成員: 丁丁
   - 外部社群:
-   - 高雄前端
+  - 高雄前端
    - [好想工作室](http://goodideas-studio.com/)
 
 ## Security
