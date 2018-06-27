@@ -1,4 +1,6 @@
 # 高雄生活
+
+
 {{< edit_me >}}
 
 ## 工作
@@ -10,9 +12,15 @@
 
 ## 餐廳
 - [Mars睦工場](https://rainieis.tw/mars-cube/)
+
 ## 溜小孩的點
+- 壽山動物園
 - 糖廠
 - 靜園
-- 水庫沒關
+- 岡山 水庫沒關
+
+## 參考
+
+- [移居台南指南](https://g0v.hackpad.tw/ep/pad/static/Dq4fzKb2aPq)
 
 {{< edit_me >}}
