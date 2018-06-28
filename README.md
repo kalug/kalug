@@ -1,5 +1,7 @@
 # Source of KaLUG HUGO site
 
+[![CircleCI](https://circleci.com/gh/kalug/kalug.svg?style=svg)](https://circleci.com/gh/kalug/kalug)
+
 master branch: only store content data
 build branch: configs/layouts/themes of hugo
 
