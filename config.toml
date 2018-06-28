@@ -8,6 +8,7 @@ pygmentsUseClasses = true
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
 DisqusShortname = "kalug-linux-org-tw"
+googleAnalytics = "UA-121574418-1"
 hasCJKLanguage = true
 
 [blackfriday]
