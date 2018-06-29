@@ -3,7 +3,7 @@
 [7/28 報名位置](https://kalug.kktix.cc/events/1807) 
 
  * Qerter: 怎麼逆向Linux elf程式
- * Hawk: Gopher Puzzlers [Slide](https://https://talks.godoc.org/github.com/davecheney/presentations/gopher-puzzlers.slide#1)
+ * Hawk: Gopher Puzzlers [Slide](https://talks.godoc.org/github.com/davecheney/presentations/gopher-puzzlers.slide#1)
    - 藉由許多想都沒想過的問題來學習到golang的細節
 
 ## 聚會地點: Tady Coffee 高雄市三民區旅順街8號
