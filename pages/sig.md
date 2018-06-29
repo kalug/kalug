@@ -1,6 +1,7 @@
 # Special Interest Group
 為了方便排定每個月分享的主題,
-我們讓各各不同興趣的同好一起安排主題分享的頻率
+我們讓各各不同興趣的同好一起安排主題分享的頻率,
+也歡迎給 推薦書單/網站/youtube
 
 {{< edit_me >}}
 
@@ -11,6 +12,8 @@
  - 半年一次 Release Party
  - 外部社群:
    - [Ubuntu-TW](https://www.ubuntu-tw.org/)
+ - 推薦書單
+   - [完全用 GNU/Linux 工作](https://legacy.gitbook.com/book/chusiang/working-on-gnu-linux/details)
 
 ## Python
  - 成員: Tim, Shawn
@@ -25,8 +28,8 @@
 
 ## Javascript/前端
  - 成員: 丁丁
-  - 外部社群:
-  - 高雄前端
+ - 外部社群:
+   - 高雄前端
    - [好想工作室](http://goodideas-studio.com/)
 
 ## Security
@@ -38,7 +41,5 @@
  - 成員: Robert, CCChen
  - 外部社群:
    - [DevOps台灣](https://t.me/devopstw)
-
- 
 
 {{< edit_me >}}
