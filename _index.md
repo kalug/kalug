@@ -3,8 +3,11 @@
 [7/28](https://kalug.kktix.cc/events/1807), [8/25](https://kalug.kktix.cc/events/1808), [9/29](https://kalug.kktix.cc/events/1809), 10/27, 11/24, 12/22
 
 ---
+以下為 [KaLUG 共筆](https://kalug.linux.org.tw/note), 
+歡迎 登入Hackmd 共同編輯.
 
-徵求分享主題, 如果有想要分享的主題 請至[共筆](https://hackmd.io/y1Y9-IzPQMeaNRL243elFQ?both#)填寫
+ **<<徵求分享主題>>**
+
 {{< hackmd y1Y9-IzPQMeaNRL243elFQ >}}
 
 ---
