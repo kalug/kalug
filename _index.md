@@ -14,3 +14,4 @@
 
 歡迎點 Edit me 幫忙修改內文
 {{< edit_me >}}
+{{< fb_like >}}
