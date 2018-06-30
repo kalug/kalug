@@ -38,8 +38,16 @@
    - 若渴計畫
    
 ## DevOps
- - 成員: Robert, CCChen
+ - 成員: CCChen, Robert
  - 外部社群:
    - [DevOps台灣](https://t.me/devopstw)
+
+---
+
+## 科技政策/社會議題
+ - [議題共筆](https://kalug.linux.org.tw/note/join-issues)
+ - 外部社群:
+   - [g0v](https://g0v.tw/en-US/), [sense.tw](https://sense.tw)
+   - [Public Money, Public Code](https://publiccode.eu/)
 
 {{< edit_me >}}
