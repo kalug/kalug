@@ -25,7 +25,9 @@
  - 每三個月
  - 外部社群:
    - [Gopher Taipei](https://t.me/golangtw)
-
+ - 推薦書單:
+   - https://golang.org/doc/effective_go.html
+   - https://talks.golang.org/2013/bestpractices.slide#30
 ## Javascript/前端
  - 成員: 丁丁
  - 外部社群:
