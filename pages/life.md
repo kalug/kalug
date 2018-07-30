@@ -26,7 +26,6 @@
 https://moptt.tw/p/Soft_Job.M.1529562011.A.0AA)
 
 ## Coworking Space
-- 大瀚放空間 博愛中心
 - 作伙共同生活空間
 
 ## 學校
