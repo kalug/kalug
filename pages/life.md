@@ -8,6 +8,7 @@
 - 加工出口區(?) 不確定有沒有軟體公司
 - [幸福高雄移居津貼](http://labor.kcg.gov.tw/LaborBenefit/Welfare/welfare02.htm)
 - 遠端工作
+- part time(影像辨識)(可在tg詢問)
 
 ### Best Practice
 
