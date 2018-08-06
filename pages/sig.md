@@ -8,7 +8,7 @@
 ---
 
 ## Ubuntu
- - 成員: Tim, Shawn
+ - Who: Tim, Shawn
  - 半年一次 Release Party
  - 外部社群:
    - [Ubuntu-TW](https://www.ubuntu-tw.org/)
@@ -16,31 +16,35 @@
    - [完全用 GNU/Linux 工作](https://legacy.gitbook.com/book/chusiang/working-on-gnu-linux/details)
 
 ## Python
- - 成員: Tim, Shawn
+ - Who: Tim, Shawn
  - 外部社群:
    - [高雄.py](https://www.meetup.com/Kaohsiung-Python-Meetup/) 聚會時間:週間晚上
 
 ## GoLang
- - 成員: Hawk, Shawn, Rick
+ - Who: Hawk, Shawn, Rick
  - 每三個月
  - 外部社群:
    - [Gopher Taipei](https://t.me/golangtw)
  - 推薦書單:
    - https://golang.org/doc/effective_go.html
    - https://talks.golang.org/2013/bestpractices.slide#30
+
+## Rust
+ - Rick86
+
 ## Javascript/前端
- - 成員: 丁丁
+ - Who: 丁丁
  - 外部社群:
    - 高雄前端
    - [好想工作室](http://goodideas-studio.com/)
 
 ## Security
- - 成員: Lightwind
+ - Who: Lightwind
  - 外部社群:
    - 若渴計畫
    
 ## DevOps
- - 成員: CCChen, Robert
+ - Who: CCChen, Robert
  - 外部社群:
    - [DevOps台灣](https://t.me/devopstw)
 
