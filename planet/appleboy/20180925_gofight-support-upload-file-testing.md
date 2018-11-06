@@ -1,5 +1,5 @@
 ---
-title: "gofight 支援檔案上傳測試"
+title: "gofight 支援多個檔案上傳測試"
 date: 2018-09-25
 type: blog
 author: AppleBoy
@@ -31,21 +31,40 @@ $ go get -u github.com/kardianos/govendor
 <pre class="brush: go; title: ; notranslate">
 func gintFileUploadHandler(c *gin.Context) {
     ip := c.ClientIP()
-    file, err := c.FormFile(&quot;test&quot;)
+    hello, err := c.FormFile(&quot;hello&quot;)
     if err != nil {
         c.JSON(http.StatusBadRequest, gin.H{
             &quot;error&quot;: err.Error(),
         })
         return
     }
+
+    helloFile, _ := hello.Open()
+    helloBytes := make([]byte, 6)
+    helloFile.Read(helloBytes)
+
+    world, err := c.FormFile(&quot;world&quot;)
+    if err != nil {
+        c.JSON(http.StatusBadRequest, gin.H{
+            &quot;error&quot;: err.Error(),
+        })
+        return
+    }
+
+    worldFile, _ := world.Open()
+    worldBytes := make([]byte, 6)
+    worldFile.Read(worldBytes)
+
     foo := c.PostForm(&quot;foo&quot;)
     bar := c.PostForm(&quot;bar&quot;)
     c.JSON(http.StatusOK, gin.H{
-        &quot;hello&quot;:    &quot;world&quot;,
-        &quot;filename&quot;: file.Filename,
-        &quot;foo&quot;:      foo,
-        &quot;bar&quot;:      bar,
-        &quot;ip&quot;:       ip,
+        &quot;hello&quot;:     hello.Filename,
+        &quot;world&quot;:     world.Filename,
+        &quot;foo&quot;:       foo,
+        &quot;bar&quot;:       bar,
+        &quot;ip&quot;:        ip,
+        &quot;helloSize&quot;: string(helloBytes),
+        &quot;worldSize&quot;: string(worldBytes),
     })
 }
 
@@ -63,22 +82,42 @@ func GinEngine() *gin.Engine {
 
 <h2>檔案上傳測試</h2>
 
-gofight 現在支援一個函式叫 <code>SetFileFromPath</code> 此 func 支援三個參數。
+gofight 現在支援一個函式叫 <code>SetFileFromPath</code> 此 func 支援兩個參數。
 
 <ol>
-<li>檔案讀取路徑</li>
-<li>POST 檔案名稱</li>
+<li>上傳檔案格式</li>
 <li>POST 參數</li>
 </ol>
 
-第一個就是測試檔案要從哪個實體路徑讀取，假設放在 <code>testdata/hello.txt</code> 那該參數就是填寫 <code>testdata/hello.txt</code>，請注意這是相對於 <code>*_test.go</code> 檔案路徑，第二個參數就是定義該檔案的 post 參數，請依照 handler 內的 <code>c.FormFile("test")</code> 來決定變數名稱，第三個參數可有可無，也就是檔案上傳頁面，可能會需要上傳其他 post 參數，這時候就要寫在第三個參數，看底下實際例子:
+第一項上傳檔案格式，可以是從實體路徑讀取，或者是透過 <code>[]byte</code> 讀取兩種格式都可以，在 gofight 可以看到 <code>UploadFile</code> struct 如下:
+
+<pre class="brush: go; title: ; notranslate">
+// UploadFile for upload file struct
+type UploadFile struct {
+    Path    string
+    Name    string
+    Content []byte
+}
+</pre>
+
+假設是透過實體路徑上傳，請在 <code>Path</code> 填上實體路徑名稱，例如: <code>./testdata/hello.txt</code>，而 <code>Name</code> 則是在 Gin 裡面接受的 Upload File 名稱 <code>c.FormFile("hello")</code>，其中的 <code>hello</code> 參數。底下是一個實際例子教大家如何上傳多個檔案測試。
 
 <pre class="brush: go; title: ; notranslate">
 func TestUploadFile(t *testing.T) {
     r := New()
 
     r.POST(&quot;/upload&quot;).
-        SetFileFromPath(&quot;fixtures/hello.txt&quot;, &quot;test&quot;, H{
+        SetDebug(true).
+        SetFileFromPath([]UploadFile{
+            {
+                Path: &quot;./testdata/hello.txt&quot;,
+                Name: &quot;hello&quot;,
+            },
+            {
+                Path: &quot;./testdata/world.txt&quot;,
+                Name: &quot;world&quot;,
+            },
+        }, H{
             &quot;foo&quot;: &quot;bar&quot;,
             &quot;bar&quot;: &quot;foo&quot;,
         }).
@@ -86,13 +125,17 @@ func TestUploadFile(t *testing.T) {
             data := []byte(r.Body.String())
 
             hello := gjson.GetBytes(data, &quot;hello&quot;)
-            filename := gjson.GetBytes(data, &quot;filename&quot;)
+            world := gjson.GetBytes(data, &quot;world&quot;)
             foo := gjson.GetBytes(data, &quot;foo&quot;)
             bar := gjson.GetBytes(data, &quot;bar&quot;)
             ip := gjson.GetBytes(data, &quot;ip&quot;)
+            helloSize := gjson.GetBytes(data, &quot;helloSize&quot;)
+            worldSize := gjson.GetBytes(data, &quot;worldSize&quot;)
 
-            assert.Equal(t, &quot;world&quot;, hello.String())
-            assert.Equal(t, &quot;hello.txt&quot;, filename.String())
+            assert.Equal(t, &quot;world\n&quot;, helloSize.String())
+            assert.Equal(t, &quot;hello\n&quot;, worldSize.String())
+            assert.Equal(t, &quot;hello.txt&quot;, hello.String())
+            assert.Equal(t, &quot;world.txt&quot;, world.String())
             assert.Equal(t, &quot;bar&quot;, foo.String())
             assert.Equal(t, &quot;foo&quot;, bar.String())
             assert.Equal(t, &quot;&quot;, ip.String())
@@ -102,9 +145,62 @@ func TestUploadFile(t *testing.T) {
 }
 </pre>
 
-可以看到上面例子正確拿到檔案上傳資料，並且測試成功。
+假設專案內有使用 <a href="https://github.com/avelino/awesome-go#resource-embedding">Resource Embedding</a> 像是 <a href="https://github.com/UnnoTed/fileb0x">fileb0x</a>，就可以透過設定 <code>Content</code> 方式來讀取喔，要注意的是，由於不是從實體路徑讀取，所以 <code>Path</code> 請直接放檔案名稱即可。測試程式碼如下:
+
+<pre class="brush: go; title: ; notranslate">
+    r := New()
+
+    helloContent, err := ioutil.ReadFile(&quot;./testdata/hello.txt&quot;)
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    worldContent, err := ioutil.ReadFile(&quot;./testdata/world.txt&quot;)
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    r.POST(&quot;/upload&quot;).
+        SetDebug(true).
+        SetFileFromPath([]UploadFile{
+            {
+                Path:    &quot;hello.txt&quot;,
+                Name:    &quot;hello&quot;,
+                Content: helloContent,
+            },
+            {
+                Path:    &quot;world.txt&quot;,
+                Name:    &quot;world&quot;,
+                Content: worldContent,
+            },
+        }, H{
+            &quot;foo&quot;: &quot;bar&quot;,
+            &quot;bar&quot;: &quot;foo&quot;,
+        }).
+        Run(framework.GinEngine(), func(r HTTPResponse, rq HTTPRequest) {
+            data := []byte(r.Body.String())
+
+            hello := gjson.GetBytes(data, &quot;hello&quot;)
+            world := gjson.GetBytes(data, &quot;world&quot;)
+            foo := gjson.GetBytes(data, &quot;foo&quot;)
+            bar := gjson.GetBytes(data, &quot;bar&quot;)
+            ip := gjson.GetBytes(data, &quot;ip&quot;)
+            helloSize := gjson.GetBytes(data, &quot;helloSize&quot;)
+            worldSize := gjson.GetBytes(data, &quot;worldSize&quot;)
+
+            assert.Equal(t, &quot;world\n&quot;, helloSize.String())
+            assert.Equal(t, &quot;hello\n&quot;, worldSize.String())
+            assert.Equal(t, &quot;hello.txt&quot;, hello.String())
+            assert.Equal(t, &quot;world.txt&quot;, world.String())
+            assert.Equal(t, &quot;bar&quot;, foo.String())
+            assert.Equal(t, &quot;foo&quot;, bar.String())
+            assert.Equal(t, &quot;&quot;, ip.String())
+            assert.Equal(t, http.StatusOK, r.Code)
+            assert.Equal(t, &quot;application/json; charset=utf-8&quot;, r.HeaderMap.Get(&quot;Content-Type&quot;))
+        })
+</pre>
 
 <h2>心得</h2>
 
 其實這類測試 HTTP Handler API 的套件相當多，當時就自幹一套當作練習，後來每個 Go 專案，我個人都用自己寫的這套，測試起來相當方便。更多詳細的用法請直接看 <a href="https://github.com/appleboy/gofight">gofight 文件</a>。對於 Go 語言有興趣的朋友們，可以直接參考我的<a href="https://www.udemy.com/golang-fight/?couponCode=GOLANG-TOP">線上課程</a>。
-<div class="wp_rp_wrap  wp_rp_plain" id="wp_rp_first"><div class="wp_rp_content"><h3 class="related_post_title">Related View</h3><ul class="related_post wp_rp"><li data-position="0" data-poid="in-6597" data-post-type="none" ><a href="https://blog.wu-boy.com/2016/11/golang-gofight-support-echo-framework/" class="wp_rp_title">輕量級 Gofight 支援 Echo 框架測試</a><small class="wp_rp_comments_count"> (0)</small><br /></li><li data-position="1" data-poid="in-6198" data-post-type="none" ><a href="https://blog.wu-boy.com/2016/04/gofight-tool-for-api-handler-testing-in-golang/" class="wp_rp_title">用 gofight 來測試 golang web API handler</a><small class="wp_rp_comments_count"> (3)</small><br /></li><li data-position="2" data-poid="in-7021" data-post-type="none" ><a href="https://blog.wu-boy.com/2018/05/how-to-write-testing-in-golang/" class="wp_rp_title">如何在 Go 專案內寫測試</a><small class="wp_rp_comments_count"> (0)</small><br /></li><li data-position="3" data-poid="in-7052" data-post-type="none" ><a href="https://blog.wu-boy.com/2018/07/graphql-in-go/" class="wp_rp_title">Go 語言實戰 GraphQL</a><small class="wp_rp_comments_count"> (0)</small><br /></li><li data-position="4" data-poid="in-6772" data-post-type="none" ><a href="https://blog.wu-boy.com/2017/07/go-framework-gin-release-v1-2/" class="wp_rp_title">Go 語言框架 Gin 終於發佈 v1.2 版本</a><small class="wp_rp_comments_count"> (2)</small><br /></li><li data-position="5" data-poid="in-6674" data-post-type="none" ><a href="https://blog.wu-boy.com/2017/03/golang-dependency-management-tool-dep/" class="wp_rp_title">Go 語言官方推出的 dep 使用心得</a><small class="wp_rp_comments_count"> (6)</small><br /></li><li data-position="6" data-poid="in-6481" data-post-type="none" ><a href="https://blog.wu-boy.com/2016/08/golang-tesing-on-jenkins/" class="wp_rp_title">在 Jenkins 跑 Golang 測試</a><small class="wp_rp_comments_count"> (0)</small><br /></li><li data-position="7" data-poid="in-6953" data-post-type="none" ><a href="https://blog.wu-boy.com/2018/01/write-golang-in-aws-lambda/" class="wp_rp_title">在 AWS Lambda 上寫 Go 語言搭配 API Gateway</a><small class="wp_rp_comments_count"> (3)</small><br /></li><li data-position="8" data-poid="in-7081" data-post-type="none" ><a href="https://blog.wu-boy.com/2018/09/graphql-go-library-support-concurrent-resolvers/" class="wp_rp_title">Go 語言的 graphQL-go 套件正式支援 Concurrent Resolvers</a><small class="wp_rp_comments_count"> (0)</small><br /></li><li data-position="9" data-poid="in-7047" data-post-type="none" ><a href="https://blog.wu-boy.com/2018/07/mkcert-zero-config-tool-to-make-locally-trusted-development-certificates/" class="wp_rp_title">在本機端快速產生網站免費憑證</a><small class="wp_rp_comments_count"> (0)</small><br /></li></ul></div></div>
+<div class="wp_rp_wrap  wp_rp_plain" ><div class="wp_rp_content"><h3 class="related_post_title">Related View</h3><ul class="related_post wp_rp"><li data-position="0" data-poid="in-6597" data-post-type="none" ><a href="https://blog.wu-boy.com/2016/11/golang-gofight-support-echo-framework/" class="wp_rp_title">輕量級 Gofight 支援 Echo 框架測試</a><small class="wp_rp_comments_count"> (0)</small><br /></li><li data-position="1" data-poid="in-6198" data-post-type="none" ><a href="https://blog.wu-boy.com/2016/04/gofight-tool-for-api-handler-testing-in-golang/" class="wp_rp_title">用 gofight 來測試 golang web API handler</a><small class="wp_rp_comments_count"> (3)</small><br /></li><li data-position="2" data-poid="in-7021" data-post-type="none" ><a href="https://blog.wu-boy.com/2018/05/how-to-write-testing-in-golang/" class="wp_rp_title">如何在 Go 專案內寫測試</a><small class="wp_rp_comments_count"> (0)</small><br /></li><li data-position="3" data-poid="in-7052" data-post-type="none" ><a href="https://blog.wu-boy.com/2018/07/graphql-in-go/" class="wp_rp_title">Go 語言實戰 GraphQL</a><small class="wp_rp_comments_count"> (0)</small><br /></li><li data-position="4" data-poid="in-6674" data-post-type="none" ><a href="https://blog.wu-boy.com/2017/03/golang-dependency-management-tool-dep/" class="wp_rp_title">Go 語言官方推出的 dep 使用心得</a><small class="wp_rp_comments_count"> (6)</small><br /></li><li data-position="5" data-poid="in-6481" data-post-type="none" ><a href="https://blog.wu-boy.com/2016/08/golang-tesing-on-jenkins/" class="wp_rp_title">在 Jenkins 跑 Golang 測試</a><small class="wp_rp_comments_count"> (0)</small><br /></li><li data-position="6" data-poid="in-6953" data-post-type="none" ><a href="https://blog.wu-boy.com/2018/01/write-golang-in-aws-lambda/" class="wp_rp_title">在 AWS Lambda 上寫 Go 語言搭配 API Gateway</a><small class="wp_rp_comments_count"> (3)</small><br /></li><li data-position="7" data-poid="in-6772" data-post-type="none" ><a href="https://blog.wu-boy.com/2017/07/go-framework-gin-release-v1-2/" class="wp_rp_title">Go 語言框架 Gin 終於發佈 v1.2 版本</a><small class="wp_rp_comments_count"> (2)</small><br /></li><li data-position="8" data-poid="in-7047" data-post-type="none" ><a href="https://blog.wu-boy.com/2018/07/mkcert-zero-config-tool-to-make-locally-trusted-development-certificates/" class="wp_rp_title">在本機端快速產生網站免費憑證</a><small class="wp_rp_comments_count"> (0)</small><br /></li><li data-position="9" data-poid="in-6671" data-post-type="none" ><a href="https://blog.wu-boy.com/2017/03/error-handler-in-golang/" class="wp_rp_title">Go 語言的錯誤訊息處理</a><small class="wp_rp_comments_count"> (0)</small><br /></li></ul></div></div>
