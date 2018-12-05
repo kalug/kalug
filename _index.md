@@ -3,7 +3,7 @@
 
 
  * [12/29 KaLUG 1812](https://kalug.kktix.cc/events/1812) - Alberich - Coq / Louis - GIS 系统
- * 預計聚會 2019 1/26, 2/23, 3/23, 4/27, 5/25, 6/22 (地點尚未決定)
+ * 預計聚會 2019 1/26, 2/23, 3/23, 4/27, 5/25, 6/22
 ---
 以下為 [KaLUG 共筆](https://kalug.linux.org.tw/note), 
 歡迎 登入Hackmd 共同編輯.
