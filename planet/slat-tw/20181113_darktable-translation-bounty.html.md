@@ -1,0 +1,11 @@
+---
+title: "Raw 檔顯色器軟體 darktable 徵求翻譯中"
+date: 2018-11-13
+type: blog
+author: 軟體自由運動部落格
+link: https://slat-tw.blogspot.com/2018/11/darktable-translation-bounty.html
+layout: post
+comments: true
+---
+
+現代數位攝影領域中，以 Raw 檔顯色器編修原始相片的過程，已取代傳統的暗房洗片與顯色。自由軟體世界中，亦有 darktable 這樣的 Raw 檔顯色軟體開放給任何人自由使用、研究、修改、分享、散布。<br /><br />雖然 darktable 已經存在許久，但至今尚未有正體中文翻譯，待有經驗且有空遐的朋友貢獻。因此，支持改善自由軟體正體中文情況的 L10n Taiwan，今日（2018年11月13日）發起了翻譯徵求活動，若同意相關要求並貢獻翻譯者，可向 L10n Taiwan 申請 400USD 的獎金！<br /><br /><h4>Bountysource 獎金項目連結</h4><a href="https://www.bountysource.com/issues/64499542-darktable-pull-request">64499542-darktable-pull-request</a>：<a href="https://www.bountysource.com/issues/64499542-darktable-pull-request">https://www.bountysource.com/issues/64499542-darktable-pull-request</a><br /><br /><h4>獎金申請要求</h4><blockquote class="tr_bq">翻譯貢獻者將永不行使其著作權：永不禁止他人複製其翻譯，亦永不尋求任何形式之賠償。任何人隨時皆能自由使用、修改、與散布這些翻譯。 </blockquote>步驟：<br /><ol><li>利用 <a href="https://github.com/l10n-tw/darktable">https://github.com/l10n-tw/darktable</a> 與 github 版控進行翻譯，並到<a href="https://github.com/l10n-tw/l10n-tw-translationproject/issues/2">本 issue </a>下方認領翻譯</li><li>翻譯完成且經過校對後，到 <a href="https://github.com/darktable-org/darktable">https://github.com/darktable-org/darktable</a> 上游發 Pull Request</li><li>翻譯術語<span style="color: red;"><b>請遵循 GNOME 慣例</b></span>，最後成果會由 zerng07 校對</li></ol>若翻譯期間需要參考既有之顯色器軟體介紹中文書籍（如專有軟體 Lightroom），可向 <a href="https://github.com/zerng07">zerng07</a> 聯絡，願給予書籍贊助。<br /><br />註：此獎金限於即日起6個月內申請提領，且提領者需有 PayPal 帳號收受獎金。若無 PayPal 帳號，可<a href="mailto:service@slat.org" rel="nofollow" target="_blank">與協會聯絡</a>以便取得協助。<br /><br /><h4>Github Issue 連結</h4><a href="https://github.com/l10n-tw/l10n-tw-translationproject/issues/2">darktable 翻譯並到上游發 Pull Request</a><br /><br /><h4>獎金來源</h4>目前 L10n Taiwan 計劃下，有三位<a href="https://salt.bountysource.com/teams/l10n-tw/supporters">支持者</a>每月給予小額贊助。而其中一位匿名支持者，更是每月給予 20 美金的贊助，長期累積至今方有機會讓本次贊助活動成行。<br /><br />願意支持改善自由軟體正體中文環境的朋友們，現在就前往 Bountysource 的 Salt 網站，給予 L10n Taiwan (l10n-tw) 支持與贊助吧！<br /><br /><h4>L10n Taiwan (l10n-tw) 的 Bountysource salt 贊助連結</h4><a href="https://salt.bountysource.com/teams/l10n-tw">前往 Salt 網站的 l10n-tw 頁面給予贊助</a>：<a href="https://salt.bountysource.com/teams/l10n-tw">https://salt.bountysource.com/teams/l10n-tw</a><br /><br />感謝所有出資者，讓本次贊助方案成行！相信活動必能圓滿成功！&nbsp;
