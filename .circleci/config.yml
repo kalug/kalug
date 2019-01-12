@@ -47,6 +47,7 @@ jobs:
             python3 -m venv venv
             . venv/bin/activate
             pip install -r requirements.txt
+            ./load_hackmd.py
             ./rss2md.py
             wget https://github.com/gohugoio/hugo/releases/download/v0.41/hugo_0.41_Linux-64bit.tar.gz
             pushd venv/bin
