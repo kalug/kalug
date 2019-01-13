@@ -6,7 +6,7 @@
 **主題：**
  - **Alberich - Coq**
 
-[>>>KKTIX 報名網址<<<](https://kalug.kktix.cc/events/1901)
+[>>> KKTIX 報名網址 <<<](https://kalug.kktix.cc/events/1901)
 
 時間：2019/01/26(周六) 14:00 ~ 18:00
 地點: Tady Coffee 高雄市三民區旅順街8號 (低消100)
