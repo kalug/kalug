@@ -1,14 +1,10 @@
 version: 2.1
 
-executors:
-  kalug-executor:
+jobs:
+  build:
     docker:
       - image: circleci/python:3.6.5-stretch
     working_directory: ~/repo
-
-jobs:
-  build:
-    executor: kalug-executor
     steps:
       - run:
           name: checkout
@@ -19,15 +15,6 @@ jobs:
             git --version
             git clone -b build git@github.com:kalug/kalug.git ~/repo
             git worktree add content origin/master -b master
-#      - restore_cache:
-#          keys:
-#          - v1-dependencies-{{ checksum "requirements.txt" }}
-#          # fallback to using the latest cache if no exact match is found
-#          - v1-dependencies-
-#      - save_cache:
-#          paths:
-#            - ./venv
-#          key: v1-dependencies-{{ checksum "requirements.txt" }}
       - run:
           name: run build
           command: |
@@ -62,12 +49,9 @@ jobs:
             git commit -m "ci update" || true
             git push origin master || true
             popd
-    branches:
-      only:
-        - master
 
 workflows:
-  version: 2
-  build:
-    jobs:
-      - build
+    version: 2
+    "kalug hugo build":
+        jobs:
+          - build
