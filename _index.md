@@ -2,20 +2,20 @@
 
 ###### tags: kalug
 
-## 1901 01/26
-**主題：**
- - **Alberich - Coq**
+## 1904 04/27
+ - Rick [node-golang-native-addon-experiment](https://github.com/charlieduong94/node-golang-native-addon-experiment)
 
-[>>> KKTIX 報名網址 <<<](https://kalug.kktix.cc/events/1901)
 
-時間：2019/01/26(周六) 14:00 ~ 18:00
+[>>> KKTIX 報名網址 <<<](https://kalug.kktix.cc/events/1904)
+
+時間：2019/04/27 (周六) 14:00 ~ 18:00
 地點: Tady Coffee 高雄市三民區旅順街8號 (低消100)
+
+---
 
 ## 預期聚會
 如果您有想要聽的主題或是想要分享的主題 歡迎在下面留下
-* [2⁄23](https://kalug.kktix.cc/events/1902) 主題徵求中
-* [3⁄23](https://kalug.kktix.cc/events/1903) 主題徵求中
-* [4⁄27](https://kalug.kktix.cc/events/1904) 主題徵求中
+
 * [5⁄25](https://kalug.kktix.cc/events/1905) 主題徵求中 
 * [6⁄22](https://kalug.kktix.cc/events/1906) 主題徵求中
 * [7⁄27](https://kalug.kktix.cc/events/1907) 主題徵求中
@@ -24,6 +24,11 @@
 
 ## 近期(保留近半年)聚會資料 歡迎填寫 (不定期補回KaLUG網站)
 
+### 1903 03/23
+
+**主題：**
+ - **一卡 - Smalltalk**
+ - **Shawn - Podman**
 ---
 
 ## 星球申請 (blog 分享)
