@@ -1,5 +1,5 @@
 ---
-title: "DevOps 人一定要知道的持續交付技巧 - Ansible & GitLab CI 實戰演練"
+title: "DevOps 人一定要知道的持續交付技巧 - Ansible & GitLab CI 實戰演練工作坊"
 date: 2017-11-12
 type: blog
 author: 凍仁翔
