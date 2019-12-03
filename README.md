@@ -8,7 +8,9 @@ build branch: configs/layouts/themes of hugo
 ```
  ~ $ git clone -b build git@github.com:kalug/kalug.git
  ~ $ cd kalug
- kalug $ git worktree add content origin/master
+ kalug $ git worktree add content origin/master -b master
+ kalug $ git submodule add https://github.com/halogenica/beautifulhugo.git themes/beautifulhugo/
+
 
  kalug $ hugo server
 ```
