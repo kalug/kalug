@@ -3,7 +3,7 @@ import type { Site, SocialObjects } from "./types";
 export const SITE: Site = {
   website: "https://kalug.tw/", // replace this with your deployed domain
   author: "KaLUG",
-  profile: "https://github.com/kalug/kalug",
+  profile: "https://kalig.tw/",
   desc: "kaohsiung linux User Group",
   title: "KaLUG",
   ogImage: "astropaper-og.jpg",
@@ -34,13 +34,13 @@ export const LOGO_IMAGE = {
 export const SOCIALS: SocialObjects = [
   {
     name: "Github",
-    href: "https://github.com/satnaing/astro-paper",
+    href: "https://github.com/kalug/kalug",
     linkTitle: ` ${SITE.title} on Github`,
     active: true,
   },
   {
     name: "Facebook",
-    href: "https://github.com/satnaing/astro-paper",
+    href: "https://www.facebook.com/groups/kalug.tw",
     linkTitle: `${SITE.title} on Facebook`,
     active: true,
   },
@@ -48,13 +48,13 @@ export const SOCIALS: SocialObjects = [
     name: "Instagram",
     href: "https://github.com/satnaing/astro-paper",
     linkTitle: `${SITE.title} on Instagram`,
-    active: true,
+    active: false,
   },
   {
     name: "LinkedIn",
     href: "https://github.com/satnaing/astro-paper",
     linkTitle: `${SITE.title} on LinkedIn`,
-    active: true,
+    active: false,
   },
   {
     name: "Mail",
@@ -112,9 +112,9 @@ export const SOCIALS: SocialObjects = [
   },
   {
     name: "Discord",
-    href: "https://github.com/satnaing/astro-paper",
+    href: "https://discord.com/channels/1279413624531718154/1279413976685477969",
     linkTitle: `${SITE.title} on Discord`,
-    active: false,
+    active: true,
   },
   {
     name: "GitLab",
