@@ -51,6 +51,12 @@ export const SOCIALS: SocialObjects = [
     active: false,
   },
   {
+    name: "Calendar",
+    href: "https://kalug.kktix.cc/",
+    linkTitle: `${SITE.title} on KKTIX`,
+    active: false,
+  },
+  {
     name: "LinkedIn",
     href: "https://github.com/satnaing/astro-paper",
     linkTitle: `${SITE.title} on LinkedIn`,
