@@ -17,13 +17,16 @@ const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 
 const socialCount = SOCIALS.filter(social => social.active).length;
+
+const title = 'KaLUG - 高雄Linux User Group';
+const description = '由一群熱愛 open source / free software 的高雄人所組成的社群, 每月選一周末聚會技術分享';
 ---
 
 <Layout>
   <Header />
   <main id="main-content">
     <section id="hero">
-      <h1>Mingalaba</h1>
+      <h1>{title}</h1>
       <a
         target="_blank"
         href="/rss.xml"
@@ -42,10 +45,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       </a>
 
       <p>
-        AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro
-        blog theme. This theme follows best practices and provides accessibility
-        out of the box. Light and dark mode are supported by default. Moreover,
-        additional color schemes can also be configured.
+        {description}
       </p>
       <p>
         Read the blog posts or check
