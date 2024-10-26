@@ -141,7 +141,7 @@ export const SOCIALS: SocialObjects = [
     name: "Discord",
     href: "https://discord.com/channels/1279413624531718154/1279413976685477969",
     linkTitle: `${SITE.title} on Discord`,
-    active: true,
+    active: false,
   },
   {
     name: "GitLab",
@@ -169,9 +169,9 @@ export const SOCIALS: SocialObjects = [
   },
   {
     name: "Telegram",
-    href: "https://github.com/satnaing/astro-paper",
+    href: "https://t.me/+PQGfF2IkjlYxOTA1",
     linkTitle: `${SITE.title} on Telegram`,
-    active: false,
+    active: true,
   },
   {
     name: "Mastodon",
