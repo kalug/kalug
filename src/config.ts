@@ -1,4 +1,25 @@
 import type { Site, SocialObjects } from "./types";
+import type { GiscusProps } from "@giscus/react";
+
+// GiscusProps
+//
+// https://astro-paper.pages.dev/posts/how-to-integrate-giscus-comments/
+// https://giscus.app/
+
+
+export const GISCUS: GiscusProps = {
+  repo: "kalug/kalug",
+  repoId: "MDEwOlJlcG9zaXRvcnk0NjM5OTI2Mg==",
+  category: "General",
+  categoryId: "DIC_kwDOAsP_Hs4CjuBs",
+  mapping: "pathname",
+  reactionsEnabled: "1",
+  emitMetadata: "0",
+  inputPosition: "bottom",
+  lang: "en",
+  loading: "lazy",
+};
+
 
 export const SITE: Site = {
   website: "https://kalug.tw/", // replace this with your deployed domain
