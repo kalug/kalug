@@ -1,6 +1,6 @@
 ---
 title: "來試試線上線下同步聚會"
-pubDatetime: 2024-10-27
+pubDatetime: 2024-10-26
 slug: lets-meet-online
 tags:
   - jitsi
