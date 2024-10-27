@@ -73,9 +73,9 @@ export const SOCIALS: SocialObjects = [
   },
   {
     name: "Calendar",
-    href: "https://kalug.kktix.cc/",
-    linkTitle: `${SITE.title} on KKTIX`,
-    active: false,
+    href: "https://calendar.google.com/calendar/u/0?cid=OWJkcmZqMGxoY2Rpc3A1cjlkdXB0ZmYwNmNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ",
+    linkTitle: `${SITE.title} on calendar.google`,
+    active: true,
   },
   {
     name: "LinkedIn",
