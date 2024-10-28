@@ -28,6 +28,14 @@ Welcome to join our planet! Please leave your blog url in the below disqus!
 ## meetup
 實體聚會, Just for Fun 為最高原則, 每次會準備1~2主題 (10~30mins 分享), 方便新朋友參與討論.
 
+
+
+![megabay 大港創艦](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzTUqYbCCfqEmvjKHgj1AmKkTPS5M2Wjc7gA&s)
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1841.564443005479!2d120.29905579967564!3d22.61166175820609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e037f2a5a9001%3A0x28af37aaf30894aa!2s85%20Sky%20Tower!5e0!3m2!1sen!2stw!4v1730085449958!5m2!1sen!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+
 ### team writing / hackmd
 每次聚會我們開共筆讓大家一起筆記
 
@@ -39,3 +47,8 @@ Welcome to join our planet! Please leave your blog url in the below disqus!
 
 ## github repos
 如果覺得網站有點醜, 或有想推點什麼歡迎直接 repo 送 Pull Requests.
+
+
+# Sponsors
+
+大港創艦 MEGABAY - 感謝支援場地 2024/11~2025/04
