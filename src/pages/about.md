@@ -25,7 +25,7 @@ Welcome to join our planet! Please leave your blog url in the below disqus!
 
 未來目標以 kalug.tw 聯絡管道; github / hackmd 為主要維護管道. 簡化聯繫難度.
 
-## meetup
+## meetup@MEGABAY
 實體聚會, Just for Fun 為最高原則, 每次會準備1~2主題 (10~30mins 分享), 方便新朋友參與討論.
 
 
