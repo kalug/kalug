@@ -51,5 +51,5 @@ Welcome to join our planet! Please leave your blog url in the below disqus!
 
 ## 合作夥伴
 
-- 大港創艦 MEGABAY - 感謝支援場地 2024/11~2025/04
+- 大港創艦 MEGABAY - 感謝支援場地
 - Hackmd
