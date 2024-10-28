@@ -12,7 +12,7 @@ tags:
   - kalug.tw
   - meetup
   
-description: go online
+description: 改版後的 kalug.tw 首頁, 支援共筆/註解/按讃. 另外現場用 jitsi + youtube stream 作為未來線上並實體討論的實驗
 ---
 
 [![hackmd-github-sync-badge](https://hackmd.io/9M2W8-VtRKmrzbAqmgPJIw/badge)](https://hackmd.io/9M2W8-VtRKmrzbAqmgPJIw)
