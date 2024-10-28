@@ -10,6 +10,8 @@ tags:
   - gh-discussions
   - hackmd
   - kalug.tw
+  - meetup
+  
 description: go online
 ---
 
@@ -23,5 +25,10 @@ description: go online
 jisti with youtube stream
 hackmd link
 
+[![MOPCON2024 unconf](https://img.youtube.com/vi/2s7OTjtuOio/0.jpg)](https://www.youtube.com/watch?v=2s7OTjtuOio)
+
+原來 youtube stream 不是直播完就有, 還有個處理時間
 
 Hello MOPCON unconf
+
+test push again
