@@ -1,5 +1,5 @@
 ---
-title: "Warp - AI terminal"
+title: "KaLUG2411 Warp - AI terminal"
 pubDatetime: 2024-10-27
 slug: meetup2411
 tags:
