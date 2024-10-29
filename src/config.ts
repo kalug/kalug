@@ -27,7 +27,7 @@ export const SITE: Site = {
   profile: "https://kalig.tw/",
   desc: "kaohsiung linux User Group",
   title: "KaLUG",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "kalug-people.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
   postPerPage: 3,
