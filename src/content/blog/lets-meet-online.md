@@ -38,8 +38,11 @@ https://github.com/satnaing/astro-paper
 一個泰國前端做的project, 2.5k星星, @shawn111 挑的原因是很簡潔.
 
 astro.js 所謂的 template 其實是整個 clone 下來, @shawn111 拉下的時候也包含很多原始檔案, 這也是內容有時候可能還怪怪的, 比如目前的REAMDE.
-```
 
+
+astro.js init
+```
+npm create astro@latest -- --template satnaing/astro-paper kalug
 ```
 
 這個部分 hugo (Go版) / zola (Rust版) 就方便一點, 切換template部分.
