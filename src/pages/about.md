@@ -49,7 +49,9 @@ Welcome to join our planet! Please leave your blog url in the below disqus!
 如果覺得網站有點醜, 或有想推點什麼歡迎直接 repo 送 Pull Requests.
 
 
-## 合作夥伴
+## 特別感謝
 
 - 大港創艦 MEGABAY - 感謝支援場地
 - Hackmd
+
+- 輕風(Lightwind) - 高瞻遠矚 買下 kalug.tw
