@@ -1,5 +1,5 @@
 ---
-title: "KaLUG線上&實體同步聚會"
+title: "MOPCON - kalug.tw go online"
 pubDatetime: 2024-10-26
 slug: lets-meet-online
 tags:
