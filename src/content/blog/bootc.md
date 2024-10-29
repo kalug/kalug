@@ -1,7 +1,7 @@
 ---
 title: "TOOCON2411 - A talk about bootable container"
 pubDatetime: 2024-10-26
-slug: 
+slug: bootc
 tags:
   - meetup
   - TOOCON
