@@ -12,14 +12,14 @@ tags:
   - kalug.tw
   - meetup
   
-description: 改版後的 kalug.tw 首頁, 支援共筆/註解/按讃. 另外現場用 jitsi + youtube stream 作為未來線上並實體討論的實驗
+description: 改版後的 kalug.tw 首頁, 支援共筆/註解/按讃. 另外現場用 Jitsi + YouTube stream 作為未來線上並實體討論的實驗
 ---
 
 [![hackmd-github-sync-badge](https://hackmd.io/9M2W8-VtRKmrzbAqmgPJIw/badge)](https://hackmd.io/9M2W8-VtRKmrzbAqmgPJIw)
 
 # MOPCON - unconf X KaLUG - let's go online, kalug.tw
 
-改版後的 kalug.tw 首頁, 支援共筆/註解/按讃. 另外現場用 jitsi + youtube stream 作為未來線上並實體討論的實驗
+改版後的 kalug.tw 首頁, 支援共筆/註解/按讃. 另外現場用 Jitsi + YouTube stream 作為未來線上並實體討論的實驗
 
 
 [![MOPCON2024 unconf](https://img.youtube.com/vi/2s7OTjtuOio/0.jpg)](https://www.youtube.com/watch?v=2s7OTjtuOio)
@@ -42,10 +42,10 @@ astro.js 所謂的 template 其實是整個 clone 下來, @shawn111 拉下的時
 
 ```
 
-這個部分 hugo (go版) / zola (rust版) 就方便一點, 切換template部分.
+這個部分 hugo (Go版) / zola (Rust版) 就方便一點, 切換template部分.
 
 ### content
-內容走 markdown, 透過 hackmd GitHub sync 功能, 當新內容更新後 GitHub Actions 編譯後推上 GitHub Pages.
+內容走 Markdown, 透過 HackMD GitHub sync 功能, 當新內容更新後 GitHub Actions 編譯後推上 GitHub Pages.
 
 src/content/blog
 
@@ -87,7 +87,7 @@ https://astro.build/blog/community-loaders/
 上次的分享很精彩, 就是沒法錄 (大家沒深入看,似乎有webhook, unconf 現場也有朋友提可以， 如果有清楚的朋友歡迎補充)
 
 
-### jitsi + youtube stream
+### Jitsi + YouTube stream
 
 https://jitsi.org/blog/live-streaming-with-jitsi-and-youtube/
 
@@ -96,7 +96,7 @@ https://jitsi.org/blog/live-streaming-with-jitsi-and-youtube/
 
 原來 youtube stream 不是直播完就有, 還有個處理時間
 
-### skynet - jitsi AI summaries
+### skynet - Jitsi AI summaries
 
 - https://github.com/jitsi/skynet
 - https://fosdem.sojourner.rocks/2024/event/3591
