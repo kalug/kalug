@@ -141,7 +141,7 @@ export const SOCIALS: SocialObjects = [
     name: "Discord",
     href: "https://discord.com/channels/1279413624531718154/1279413976685477969",
     linkTitle: `${SITE.title} on Discord`,
-    active: false,
+    active: true,
   },
   {
     name: "GitLab",
