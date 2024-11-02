@@ -20,7 +20,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 const socialCount = SOCIALS.filter(social => social.active).length;
 
 const title = 'KaLUG - 高雄Linux User Group';
-const description = '由一群熱愛 Linux / open source 的高雄人所組成的社群, 每月選一周末聚會技術分享';
+const description = '由一群熱愛 Linux / open source 的高雄人所組成的社群';
 
 
 ---
@@ -47,8 +47,12 @@ const description = '由一群熱愛 Linux / open source 的高雄人所組成�
         <span class="sr-only">RSS Feed</span>
       </a>
       <p>
-
         {description}
+        <ul style="list-style-type:square">
+	  <li>實體聚會- 每月選一周末聚會技術分享 (講者有意願時會開直播)</li>
+	  <li>線上聚會- MOPCON X KaLUG - 周間 每月基本一次</li>
+	  <!-- <li>年度聚會 MOPCON unconf</li> -->
+        </ul>
       </p>
       <!--
       <p>
