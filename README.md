@@ -185,3 +185,13 @@ Licensed under the MIT License, Copyright © 2023
 ---
 
 Made with 🤍 by [Sat Naing](https://satnaing.dev) 👨🏻‍💻 and [contributors](https://github.com/satnaing/astro-paper/graphs/contributors).
+
+
+---
+
+Changelog
+
+- add fullcalendar support
+  - https://fullcalendar.io/
+  - https://github.com/czbone/astro-calendar
+  - https://docs.simplecalendar.io/find-google-calendar-id/

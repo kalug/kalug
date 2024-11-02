@@ -15,6 +15,12 @@
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/rss": "^4.0.7",
+    "@fullcalendar/core": "^6.1.15",
+    "@fullcalendar/daygrid": "^6.1.15",
+    "@fullcalendar/google-calendar": "^6.1.15",
+    "@fullcalendar/react": "^6.1.15",
+    "@fullcalendar/resource": "^6.1.15",
+    "@fullcalendar/resource-timeline": "^6.1.15",
     "@giscus/react": "^3.0.0",
     "@resvg/resvg-js": "^2.6.2",
     "astro": "^4.16.3",

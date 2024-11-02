@@ -4,6 +4,7 @@ import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import LinkButton from "@components/LinkButton.astro";
+import Calendar from "@components/Calendar";
 import Hr from "@components/Hr.astro";
 import Card from "@components/Card";
 import Socials from "@components/Socials.astro";
@@ -45,7 +46,6 @@ const description = '由一群熱愛 Linux / open source 的高雄人所組成�
         </svg>
         <span class="sr-only">RSS Feed</span>
       </a>
-
       <p>
 
         {description}
@@ -124,6 +124,7 @@ const description = '由一群熱愛 Linux / open source 的高雄人所組成�
         </svg>
       </LinkButton>
     </div>
+    <Calendar client:load />
   </main>
 
   <Footer />
