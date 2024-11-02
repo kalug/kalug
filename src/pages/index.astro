@@ -97,7 +97,7 @@ const description = '由一群熱愛 Linux / open source 的高雄人所組成�
     {
       recentPosts.length > 0 && (
         <section id="recent-posts">
-          <h2>Recent Posts</h2>
+          <h2>Posts - 活動預告兼共筆</h2>
           <ul>
             {recentPosts.map(
               ({ data, slug }, index) =>
@@ -114,6 +114,7 @@ const description = '由一群熱愛 Linux / open source 的高雄人所組成�
       )
     }
 
+
     <div class="all-posts-btn-wrapper">
       <LinkButton href="/posts/">
         All Posts
@@ -124,7 +125,11 @@ const description = '由一群熱愛 Linux / open source 的高雄人所組成�
         </svg>
       </LinkButton>
     </div>
-    <Calendar client:load />
+
+    <section>
+      <Calendar client:load />
+    </section>
+
   </main>
 
   <Footer />

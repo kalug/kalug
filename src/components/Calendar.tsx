@@ -10,16 +10,22 @@ export default function Calendar() {
         headerToolbar={{
           left: '',
           center: 'title'
+	  //right: 'dayGridWeek,dayGridDay' // user can switch between the two
         }}
 	googleCalendarApiKey='AIzaSyCuWMvbJMh8InLaE1Qk8-bHUjJbm8iYvPU'
 	events={{
 	    googleCalendarId:'9bdrfj0lhcdisp5r9duptff06c@group.calendar.google.com'
 	}}
-        initialView="dayGridMonth"
-        dayMaxEvents={true} // 日付枠内に表示できるイベント数を制限
-        businessHours={true} // 土日をグレーアウト
-        fixedWeekCount={false} // 週数を固定しない⇒月の週数が変わる
-        height={'90vh'} // カレンダーの高さを制限
+        //initialView="dayGridMonth"
+	initialView="dayGridWeek"
+  views= {{
+    dayGridWeek: {
+      type: 'dayGrid',
+      duration: { weeks: 3 }
+    }
+  }}
+        //fixedWeekCount={3}
+        height={'50vh'} // カレンダーの高さを制限
         // 日本語化
         //locale={jaLocale}
         // イベントの表示形式
