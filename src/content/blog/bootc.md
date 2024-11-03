@@ -1,17 +1,91 @@
 ---
-title: "TOOCON2411 - A talk about bootable container"
+title: "[event 1130] TOOCON - bootc, a kind of bootable container"
 pubDatetime: 2024-10-26
 slug: bootc
 tags:
   - meetup
   - TOOCON
   
-description: A talk about bootable container
+description: bootc, a kind of bootable container
+youtube: Kq-21SuFyIs
+hackmd: oBZXg0-RRyi86LZ1Y0S-_w
+
 ---
+# bootc, a kind of bootable container
 
-[![hackmd-github-sync-badge](https://hackmd.io/oBZXg0-RRyi86LZ1Y0S-_w/badge)](https://hackmd.io/oBZXg0-RRyi86LZ1Y0S-_w)
+> 本頁為共筆 歡迎大家一起維護
+> [![hackmd-github-sync-badge](https://hackmd.io/oBZXg0-RRyi86LZ1Y0S-_w/badge)](https://hackmd.io/oBZXg0-RRyi86LZ1Y0S-_w)
 
 
+直播link:
+https://youtube.com/live/Kq-21SuFyIs
+
+[![TOOCON](https://img.youtube.com/vi/Kq-21SuFyIs/0.jpg)](https://www.youtube.com/watch?v=Kq-21SuFyIs)
+
+
+## bootc
+bootc: Generating an ecosystem around bootable OCI containers
+https://cfp.all-systems-go.io/all-systems-go-2024/talk/LA9LXV/
+
+## live demo
+
+* bootc status
+* bootc switch
+    * centos stream to fedora
+* systemcl status bootc-fetch-apply-updates
+
+
+
+
+## What is bootable container?
+- yes, container image as storage
+- no, not a container or container engine; more like a deployer
+
+
+## What is Container?
+
+### An isolation Linux application.
+
+- Open Container Initiative (oci)
+    - docker
+    - podman
+- systemd-nspawn
+- lxc
+
+### Extensions
+- kubernetes - CRI (Container runtime interface)
+    - containerd
+    - cri-o
+
+## OCI Image
+### registry - https://github.com/opencontainers/distribution-spec
+    - hub.docker.io
+	- quay.io
+    - ghcr.io
+### image manifest / tar
+- image
+- list manifest
+- type
+
+### backend storage
+layers, images, and containers
+
+- docker
+    - overlay2 / fuse-overlayfs	/ btrfs and zfs / vfs
+- podman / [containers/storage](https://github.com/containers/storage/)
+
+
+## How it did? 
+
+
+
+
+
+
+----
+
+
+Notes from 南部大聚
 ![南部大聚](https://scontent.fkhh1-1.fna.fbcdn.net/v/t39.30808-6/457450032_8585416838135432_237796828426830138_n.jpg?stp=cp6_dst-jpg_s720x720&_nc_cat=106&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=F9z1-FoI7agQ7kNvgHuorkA&_nc_zt=23&_nc_ht=scontent.fkhh1-1.fna&_nc_gid=AADhgBnfwsCDBbBcA1-vLpw&oh=00_AYBS2Iep2uCrZUQOdtlhaMi_52NKMhXbE30HQpTPeNgubA&oe=672623B1)
 
 Note from Johnny Sung
@@ -38,6 +112,9 @@ bootc image builder
 https://docs.redhat.com/.../chap-anaconda-boot-options
 
 ---
+
+
+
 
 # Immutable solutions
 
