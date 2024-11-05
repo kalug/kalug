@@ -37,3 +37,6 @@ Hello, 麻煩有意願分享議題的朋友, 留下你的議題資訊, 或 留�
 ## bootc, a kind of bootable container
 * 講者: shawn111 +
 * 時間: 11/5 (toocon)
+
+
+就是你...
