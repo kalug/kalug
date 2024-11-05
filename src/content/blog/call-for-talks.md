@@ -1,6 +1,6 @@
 ---
 title: "Call for talks"
-pubDatetime: 2024-11-24
+pubDatetime: 2024-11-04
 slug: call-for-talks
 tags:
   - meetup
