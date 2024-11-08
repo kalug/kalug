@@ -1,13 +1,12 @@
 ---
-title: "[event 1130] TOOCON - bootc, a kind of bootable container"
-pubDatetime: 2024-10-26 20:20:00
+title: "TOOCON - bootc, a kind of bootable container"
+pubDatetime: 2024-11-05 20:20:00
 slug: bootc
 tags:
   - meetup
   - TOOCON
 author: shawn 
 description: bootc, a kind of bootable container
-youtube: Kq-21SuFyIs
 hackmd: oBZXg0-RRyi86LZ1Y0S-_w
 
 ---
@@ -17,10 +16,7 @@ hackmd: oBZXg0-RRyi86LZ1Y0S-_w
 > [![hackmd-github-sync-badge](https://hackmd.io/oBZXg0-RRyi86LZ1Y0S-_w/badge)](https://hackmd.io/oBZXg0-RRyi86LZ1Y0S-_w)
 
 
-直播link:
-https://youtube.com/live/Kq-21SuFyIs
 
-[![TOOCON](https://img.youtube.com/vi/Kq-21SuFyIs/0.jpg)](https://www.youtube.com/watch?v=Kq-21SuFyIs)
 
 
 ## bootc
