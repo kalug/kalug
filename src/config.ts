@@ -31,7 +31,8 @@ export const SITE: Site = {
   lightAndDarkMode: true,
   postPerIndex: 4,
   postPerPage: 3,
-  scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
+  //scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
+  scheduledPostMargin: 30 * 24 * 60 * 60 * 1000, // 15 minutes
   showArchives: true,
   editPost: {
     url: "https://github.com/kalug/kalug/edit/main/src/content/blog",

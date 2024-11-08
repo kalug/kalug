@@ -1,7 +1,8 @@
 ---
 title: "[Event notice] KaLUG2411 Warp - AI terminal"
-pubDatetime: 2024-10-27
+pubDatetime: 2024-11-30T15:00:00+08
 slug: meetup2411
+author: tuna
 tags:
   - warp
   - cli

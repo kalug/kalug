@@ -10,7 +10,7 @@ export interface Props {
 }
 
 export default function Card({ href, frontmatter, secHeading = true }: Props) {
-  const { title, pubDatetime, modDatetime, description } = frontmatter;
+  const { title, pubDatetime, modDatetime, description, author } = frontmatter;
   const  ylink  = "https://www.youtube.com/watch?v="+frontmatter.youtube;
   //Astro.props;
 
@@ -27,9 +27,9 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
         className="inline-block text-lg font-medium text-skin-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
       >
         {secHeading ? (
-          <h2 {...headerProps}>{title}</h2>
+          <h2 {...headerProps}> {author} - {title}</h2>
         ) : (
-          <h3 {...headerProps}>{title}</h3>
+          <h3 {...headerProps}> {author} - {title}</h3>
         )}
       </a>
 

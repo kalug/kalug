@@ -1,11 +1,11 @@
 ---
 title: "[event 1130] TOOCON - bootc, a kind of bootable container"
-pubDatetime: 2024-10-26
+pubDatetime: 2024-10-26 20:20:00
 slug: bootc
 tags:
   - meetup
   - TOOCON
-  
+author: shawn 
 description: bootc, a kind of bootable container
 youtube: Kq-21SuFyIs
 hackmd: oBZXg0-RRyi86LZ1Y0S-_w

@@ -1,6 +1,7 @@
 ---
 title: "MOPCON - kalug.tw go online"
-pubDatetime: 2024-10-26
+pubDatetime: 2024-10-27T11:00:00+08
+author: shawn
 slug: lets-meet-online
 tags:
   - jitsi

@@ -1,13 +1,12 @@
 ---
-title: "1128 Proxmox VE CLI 工具"
-pubDatetime: 2024-10-26
+title: "1114 Proxmox VE CLI 工具"
+pubDatetime: 2024-11-14T20:00:00+08
 slug: proxmox-ve-cli
 author: lloyd
 tags:
   - meetup
 description: proxmox
 ---
-
 
 
 [![hackmd-github-sync-badge](https://hackmd.io/nak2PLqRTnyOJEwLiuAU-A/badge)](https://hackmd.io/nak2PLqRTnyOJEwLiuAU-A)
