@@ -21,7 +21,8 @@ Welcome to join our planet! Please leave your blog url in the below disqus!
 
 # About hotwo involve
 
-目前主要線上聯絡管道有 github / telegram / fb / discord / kktix / google calendar
+目前主要線上聯絡管道有 [github](https://github.com/kalug) / telegram / fb / discord / kktix / google calendar
+
 
 未來目標以 kalug.tw 聯絡管道; github / hackmd 為主要維護管道. 簡化聯繫難度.
 
@@ -51,7 +52,7 @@ Welcome to join our planet! Please leave your blog url in the below disqus!
 
 ## 特別感謝
 
-- 大港創艦 MEGABAY - 感謝支援場地
-- Hackmd
+- 大港創艦 MEGABAY - 感謝支援場地 ![Megabay](https://megabay.kcg.gov.tw/Content/images/logo.png)
+- [HackMD](https://hackmd.io) ![hackMD](https://hackmd.io/logo-full.svg)
 
 - 輕風(Lightwind) - 高瞻遠矚 買下 kalug.tw domain
