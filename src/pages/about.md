@@ -51,8 +51,10 @@ Welcome to join our planet! Please leave your blog url in the below disqus!
 
 
 ## 特別感謝
+- [HackMD](https://hackmd.io) - 支援共筆平臺![hackMD](https://hackmd.io/logo-full.svg) 
 
+- [BigGo](https://biggo.com) - 字幕支援 ![BigGo](https://biggo.com.tw/icons/og-biggo.png)  
 - 大港創艦 MEGABAY - 感謝支援場地 ![Megabay](https://megabay.kcg.gov.tw/Content/images/logo.png)
-- [HackMD](https://hackmd.io) ![hackMD](https://hackmd.io/logo-full.svg)
+
 
 - 輕風(Lightwind) - 高瞻遠矚 買下 kalug.tw domain
