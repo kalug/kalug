@@ -29,8 +29,8 @@ export const SITE: Site = {
   title: "KaLUG.tw",
   ogImage: "kalug-people.jpg",
   lightAndDarkMode: true,
-  postPerIndex: 4,
-  postPerPage: 3,
+  postPerIndex: 5,
+  postPerPage: 10,
   //scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
   scheduledPostMargin: 30 * 24 * 60 * 60 * 1000, // 15 minutes
   showArchives: true,
