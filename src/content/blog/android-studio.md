@@ -1,13 +1,16 @@
 ---
 title: "DevFest 2024 Kaohsiung, Android Studio tips and tricks (Ray Yuan Liu)"
 pubDatetime: 2024-11-23T10:00:00
-slug: 
+slug: android-studio
 tags:
   - meetup
 author: ray
 description: Android Studio tips and tricks (Ray Yuan Liu)
 youtube: wjboXB-HbzI
 ---
+
+[![hackmd-github-sync-badge](https://hackmd.io/PqC_ABZcTFa-m3IWjJbvdA/badge)](https://hackmd.io/PqC_ABZcTFa-m3IWjJbvdA)
+
 
 Android Studio tips and tricks (Ray Yuan Liu)
 
