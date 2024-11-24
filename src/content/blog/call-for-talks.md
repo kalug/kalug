@@ -5,7 +5,7 @@ slug: call-for-talks
 tags:
   - meetup
 featured: true
-description: 講者徵求中
+description: 許願池+講者徵求中
 ---
 
 [![hackmd-github-sync-badge](https://hackmd.io/0oDa0w0ESau0Qo6kCdoPOA/badge)](https://hackmd.io/0oDa0w0ESau0Qo6kCdoPOA)
@@ -22,7 +22,7 @@ description: 講者徵求中
 Hello, 麻煩有意願分享議題的朋友, 留下你的議題資訊, 或 留下您有興趣的議題, 我們在一起找看看講者; 您如果對該議題有興趣, 可以在 講者後面 留 + 或註解
 
 
-* 遠端 週四晚 具體時間依照講者方便
+* 遠端 週四晚 或依照講者時間 提前一週公佈
 * 實體聚會 每月一次 週六下午
 
 
