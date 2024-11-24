@@ -10,4 +10,7 @@ author: kevin.chiu
 youtube: Mbkptm3kI-o
 ---
 
+[![hackmd-github-sync-badge](https://hackmd.io/TG5mndaDS7a5DEYFWKPAeg/badge)](https://hackmd.io/TG5mndaDS7a5DEYFWKPAeg)
+
+
 DevFest 2024 Kaohsiung, Gemini Workshop (Kevin Chiu)
