@@ -9,4 +9,7 @@ description: 使用 Keras 深度改造 Gemma
 youtube: zzX9TLN8c2A
 ---
 
+[![hackmd-github-sync-badge](https://hackmd.io/Ty6ng3iQSDivJH3X78r8lQ/badge)](https://hackmd.io/Ty6ng3iQSDivJH3X78r8lQ)
+
+
 使用 Keras 深度改造 Gemma
