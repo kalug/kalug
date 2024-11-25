@@ -9,6 +9,8 @@ tags:
 description: Tuna 要分享 warp 這個工具，現在有 Mac/Linux 版本了, 帶AI的 terminal 幫我們簡化那些流程呢
 youtube: bdI0HlvNyqg
 googlemeet: vdh-gqor-hap
+googlemap: uKVP6sQv79tYprvb8
+meetupLocation: 大港創鑑 Megabay 85大樓19F (紅線 三多商圈站)
 ---
 
 
