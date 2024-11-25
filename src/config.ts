@@ -8,7 +8,7 @@ import type { GiscusProps } from "@giscus/react";
 
 
 export const GISCUS: GiscusProps = {
-  repo: "kalug/kalug",
+  repo: "kalug/kalug.tw",
   repoId: "MDEwOlJlcG9zaXRvcnk0NjM5OTI2Mg==",
   category: "General",
   categoryId: "DIC_kwDOAsP_Hs4CjuBs",
