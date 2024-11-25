@@ -55,6 +55,6 @@ Welcome to join our planet! Please leave your blog url in the below disqus!
 
 - [BigGo](https://biggo.com) - 字幕支援 ![BigGo](https://biggo.com.tw/icons/og-biggo.png)  
 - 大港創艦 MEGABAY - 感謝支援場地 ![Megabay](https://megabay.kcg.gov.tw/Content/images/logo.png)
-
+- 酷日國際 ![crewwtw](https://crewwtw.com/wp-content/uploads/2024/09/Rectangle-299.png)
 
 - 輕風(Lightwind) - 高瞻遠矚 買下 kalug.tw domain
