@@ -1,5 +1,5 @@
 ---
-title: "[Event notice] KaLUG2411 Warp - AI terminal"
+title: "[Event notice] KaLUG2411@大港創鑑 Warp - AI terminal"
 pubDatetime: 2024-11-30T15:00:00
 slug: meetup2411
 author: tuna
@@ -20,6 +20,8 @@ googlemeet: vdh-gqor-hap
 
 Tuna 要分享 warp 這個工具，現在有 Mac/Linux 版本了, 帶AI的 terminal 幫我們簡化那些流程呢
 
+時間: 11/30 下午3:00
+地點: 大港創鑑 Megabay 85大樓19F
 https://kalug.kktix.cc/events/241130
 
 
