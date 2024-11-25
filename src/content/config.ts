@@ -23,6 +23,8 @@ const blog = defineCollection({
       youtube: z.string().optional(),
       googlemeet: z.string().optional(),
       hackmd: z.string().optional(),
+      googlemap: z.string().optional(),
+      meetupLocation: z.string().optional(),
       description: z.string(),
       canonicalURL: z.string().optional(),
       editPost: z
