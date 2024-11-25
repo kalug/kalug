@@ -27,6 +27,7 @@ const {
   modDatetime,
   tags,
   youtube,
+  googlemeet,
   editPost,
 } = post.data;
 
@@ -39,6 +40,7 @@ const ogUrl = new URL(
 ).href;
 
 const  ylink  = "https://www.youtube.com/embed/"+youtube;
+const  mlink  = "https://meet.google.com/"+googlemeet;
 
 const layoutProps = {
   title: `${title} | ${SITE.title}`,
@@ -90,14 +92,28 @@ const nextPost =
       editPost={editPost}
       postId={post.id}
     />
+      {
+      googlemeet && (
+	  <p> <a href={mlink}>
+             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 87.5 72">
+                <path fill="#00832d" d="M49.5 36l8.53 9.75 11.47 7.33 2-17.02-2-16.64-11.69 6.44z"/>
+                <path fill="#0066da" d="M0 51.5V66c0 3.315 2.685 6 6 6h14.5l3-10.96-3-9.54-9.95-3z"/>
+                <path fill="#e94235" d="M20.5 0L0 20.5l10.55 3 9.95-3 2.95-9.41z"/>
+                <path fill="#2684fc" d="M20.5 20.5H0v31h20.5z"/>
+                <path fill="#00ac47" d="M82.6 8.68L69.5 19.42v33.66l13.16 10.79c1.97 1.54 4.85.135 4.85-2.37V11c0-2.535-2.945-3.925-4.91-2.32zM49.5 36v15.5h-29V72h43c3.315 0 6-2.685 6-6V53.08z"/>
+                <path fill="#ffba00" d="M63.5 0h-43v20.5h29V36l20-16.57V6c0-3.315-2.685-6-6-6z"/>
+             </svg>
+		   Google Meet </a>
+	  </p>)
+      }
+
     <article id="article" class="prose mx-auto mt-8 max-w-3xl">
       {
       youtube && (
-      <p> 儘量上字幕, 沒有太多後製, 麻煩大家進youtube 開字幕, 直接跳轉有興趣部分 </p>
+      <p> 儘量上字幕, 沒有太多後製, 麻煩大家進youtube 開字幕, 直接跳轉有興趣部分, 部分private影片, 由於講者或研討會有考量, 可以私訊 Shawn 加權限</p>
       <div>
 	 <iframe width="560" height="315" src={ylink} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-        )
+      </div>)
       }
 
       <Content />

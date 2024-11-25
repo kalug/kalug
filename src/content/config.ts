@@ -21,6 +21,7 @@ const blog = defineCollection({
         .or(z.string())
         .optional(),
       youtube: z.string().optional(),
+      googlemeet: z.string().optional(),
       hackmd: z.string().optional(),
       description: z.string(),
       canonicalURL: z.string().optional(),

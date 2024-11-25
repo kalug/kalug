@@ -180,4 +180,10 @@ export const SOCIALS: SocialObjects = [
     linkTitle: `${SITE.title} on Mastodon`,
     active: false,
   },
+  {
+    name: "GoogleMeet",
+    href: "https://meet.google.com/rmy-hugp-zwk",
+    linkTitle: `${SITE.title} on Google Meets`,
+    active: false,
+  },
 ];
