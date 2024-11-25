@@ -29,3 +29,4 @@ https://kalug.kktix.cc/events/241130
 
 
 https://hackmd.io/@Tuna/rJb7iv0lyx
+{%hackmd @Tuna/rJb7iv0lyx %}
