@@ -1,7 +1,7 @@
 ---
 title: "DevFest 2024 Kaohsiung, Android Studio tips and tricks (Ray Yuan Liu)"
 pubDatetime: 2024-11-23T10:00:00
-slug: android-studio
+slug: android_studio
 tags:
   - meetup
 author: ray
@@ -26,3 +26,8 @@ IDE 的導航與編輯功能：介紹了如何更有效地在 IDE 中開啟檔�
 其他功能：還介紹了如何使用 Presentation Mode、Distraction Free Mode 和如何避免滑鼠操作，通過鍵盤來快速完成各種操作。
 
 總體來看，這篇演講的主題是分享如何高效使用 IDE（無論是 Android Studio 還是其他 JetBrains 的 IDE）來提高開發效率，尤其是在導航、編輯和環境設置方面的技巧。
+
+
+![快速鍵](https://scontent.fkhh1-2.fna.fbcdn.net/v/t39.30808-6/468305056_10221703963427227_1996554154150639433_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=qmIqLdoGHtkQ7kNvgE4Rx6p&_nc_zt=23&_nc_ht=scontent.fkhh1-2.fna&_nc_gid=AmC1nz6prcz1FmI5-WfyrTZ&oh=00_AYBlnVY_crBuetYBRygSHMb20-qP50Spj49tIiiCag8HKw&oe=674CC2D5)
+
+[Ray 準備的快速鍵](https://drive.google.com/file/d/1BZ-JO2Z67ktKnO0BcwTGpm_1L8bWay9t/view?fbclid=IwY2xjawGz0DRleHRuA2FlbQIxMAABHXdmarx0vm2d3UU3aZzrWHojgVVQGnw2pGu2Xhvw7q2LOzWtmwx-Ff57jQ_aem_nuOiMSTno_htUy2lru5gyQ)
