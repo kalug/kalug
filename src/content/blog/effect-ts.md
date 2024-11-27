@@ -1,5 +1,5 @@
 ---
-title: "MOPCON x KaLUG Hychen effect-ts"
+title: "[Night talk] Hychen 來聊 effect-ts"
 pubDatetime: 2024-11-28T20:00:00
 slug: effect-ts
 tags:
@@ -18,3 +18,5 @@ Effect Days 2024 - https://www.youtube.com/playlist?list=PLDf3uQLaK2B9a4tbMgGd9w
 https://www.youtube.com/watch?v=tUdSNaaXZRE  Guillermo Rauch 的演講
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tUdSNaaXZRE?si=rkUGDxufY-bHGKeR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+- [FizzyElt 的 Effect-ts 概覽](https://fizzyelt.com/posts/guild-of-effect-ts/)
