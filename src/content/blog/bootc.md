@@ -5,81 +5,74 @@ slug: bootc
 tags:
   - meetup
   - TOOCON
-author: shawn 
+author: shawn
 description: bootc, a kind of bootable container
 hackmd: oBZXg0-RRyi86LZ1Y0S-_w
-
 ---
+
 # bootc, a kind of bootable container
 
 > 本頁為共筆 歡迎大家一起維護
 > [![hackmd-github-sync-badge](https://hackmd.io/oBZXg0-RRyi86LZ1Y0S-_w/badge)](https://hackmd.io/oBZXg0-RRyi86LZ1Y0S-_w)
 
-
-
-
-
 ## bootc
+
 bootc: Generating an ecosystem around bootable OCI containers
 https://cfp.all-systems-go.io/all-systems-go-2024/talk/LA9LXV/
 
 ## live demo
 
-* bootc status
-* bootc switch
-    * centos stream to fedora
-* systemcl status bootc-fetch-apply-updates
-
-
-
+- bootc status
+- bootc switch
+  - centos stream to fedora
+- systemcl status bootc-fetch-apply-updates
 
 ## What is bootable container?
+
 - yes, container image as storage
 - no, not a container or container engine; more like a deployer
-
 
 ## What is Container?
 
 ### An isolation Linux application.
 
 - Open Container Initiative (oci)
-    - docker
-    - podman
+  - docker
+  - podman
 - systemd-nspawn
 - lxc
 
 ### Extensions
+
 - kubernetes - CRI (Container runtime interface)
-    - containerd
-    - cri-o
+  - containerd
+  - cri-o
 
 ## OCI Image
+
 ### registry - https://github.com/opencontainers/distribution-spec
+
     - hub.docker.io
-	- quay.io
+    - quay.io
     - ghcr.io
+
 ### image manifest / tar
+
 - image
 - list manifest
 - type
 
 ### backend storage
+
 layers, images, and containers
 
 - docker
-    - overlay2 / fuse-overlayfs	/ btrfs and zfs / vfs
+  - overlay2 / fuse-overlayfs / btrfs and zfs / vfs
 - podman / [containers/storage](https://github.com/containers/storage/)
 
+## How it did?
 
-## How it did? 
-
-
-
-
-
-
-----
-
+---
 
 Notes from 南部大聚
 ![南部大聚](https://scontent.fkhh1-1.fna.fbcdn.net/v/t39.30808-6/457450032_8585416838135432_237796828426830138_n.jpg?stp=cp6_dst-jpg_s720x720&_nc_cat=106&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=F9z1-FoI7agQ7kNvgHuorkA&_nc_zt=23&_nc_ht=scontent.fkhh1-1.fna&_nc_gid=AADhgBnfwsCDBbBcA1-vLpw&oh=00_AYBS2Iep2uCrZUQOdtlhaMi_52NKMhXbE30HQpTPeNgubA&oe=672623B1)
@@ -88,15 +81,16 @@ Note from Johnny Sung
 
 https://www.facebook.com/share/p/129wP88YHmb/
 
-
 ostree
 https://github.com/ostreedev/ostree
 Composefs
 https://github.com/containers/composefs
 怎麼用
+
 ```
 mount -t composefs /path/to/image.cfs -o basedir=/path/to/datafiles /mnt
 ```
+
 EROFS: Enhanced Read-Only File System
 https://erofs.docs.kernel.org/en/latest/
 bootc: Transactional, in-place operating system updates using OCI/Docker container images.
@@ -109,9 +103,6 @@ https://docs.redhat.com/.../chap-anaconda-boot-options
 
 ---
 
-
-
-
 # Immutable solutions
 
 Upgrade system always is a pain point for me, especially with package manager systems.
@@ -120,12 +111,14 @@ They could work just sometime accident might happen, then need a lot of human op
 There are lots of immutable solutions for os upgrade.
 
 ## solution concepts:
+
 - A/B switch
-  -  systemd usr-merge
+  - systemd usr-merge
 - file system snapshot
 - oci image
 
 ## solutions:
+
 - ubuntu snap
 - nixos
 - talos
@@ -139,7 +132,6 @@ There are lots of immutable solutions for os upgrade.
 
 # bootc - bootable container
 
-
 - ostree
 - composefs
 
@@ -149,13 +141,11 @@ https://github.com/containers/bootc
 
 I really like bootc concept and thought it would the next `docker`.
 
-
 ## podman with composefs as storage backend
 
 [Composefs state of the union](https://blogs.gnome.org/alexl/2023/07/11/composefs-state-of-the-union/)
 
 https://github.com/containers/storage/pull/1646
-
 
 https://github.com/containers/storage/blob/main/docs/containers-storage-composefs.md
 
@@ -175,12 +165,12 @@ use_composefs = "true"
 convert_images = "true"
 ```
 
-* [mount-cfs-oci.sh](/assets/mount-cfs-oci.sh)
+- [mount-cfs-oci.sh](/assets/mount-cfs-oci.sh)
 
 ```bash
 #!/bin/bash
 
-TAG=${TAG:=docker.io/library/alpine:latest} 
+TAG=${TAG:=docker.io/library/alpine:latest}
 MNT=${MNT:=/mnt}
 
 BASEDIR=/var/lib/containers/storage/overlay
@@ -191,7 +181,6 @@ LAYER=$(cat ${INDEX_FN} | jq -r '.[] | select( .names |  any( "$TAG" ) )  | .lay
 
 mount -t composefs ${BASEDIR}/${LAYER}/composefs-data/composefs.blob -o basedir=${BASEDIR} $MNT
 ```
-
 
 ```
 $ podman pull quay.io/centos-bootc/centos-bootc:stream9
@@ -219,4 +208,3 @@ mount --bind /sysroot.tmp/ostree/deploy/default/var /sysroot/var
 modprobe zram
 modprobe xfs
 ```
-

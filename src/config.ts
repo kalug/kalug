@@ -6,7 +6,6 @@ import type { GiscusProps } from "@giscus/react";
 // https://astro-paper.pages.dev/posts/how-to-integrate-giscus-comments/
 // https://giscus.app/
 
-
 export const GISCUS: GiscusProps = {
   repo: "kalug/kalug.tw",
   repoId: "MDEwOlJlcG9zaXRvcnk0NjM5OTI2Mg==",
@@ -19,7 +18,6 @@ export const GISCUS: GiscusProps = {
   lang: "en",
   loading: "lazy",
 };
-
 
 export const SITE: Site = {
   website: "https://kalug.tw/", // replace this with your deployed domain

@@ -11,9 +11,7 @@ youtube: wjboXB-HbzI
 
 [![hackmd-github-sync-badge](https://hackmd.io/PqC_ABZcTFa-m3IWjJbvdA/badge)](https://hackmd.io/PqC_ABZcTFa-m3IWjJbvdA)
 
-
 Android Studio tips and tricks (Ray Yuan Liu)
-
 
 講者分享如何高效使用 Android Studio 和 JetBrains IDE。以下是一些重要內容的摘要：
 
@@ -26,7 +24,6 @@ IDE 的導航與編輯功能：介紹了如何更有效地在 IDE 中開啟檔�
 其他功能：還介紹了如何使用 Presentation Mode、Distraction Free Mode 和如何避免滑鼠操作，通過鍵盤來快速完成各種操作。
 
 總體來看，這篇演講的主題是分享如何高效使用 IDE（無論是 Android Studio 還是其他 JetBrains 的 IDE）來提高開發效率，尤其是在導航、編輯和環境設置方面的技巧。
-
 
 ![快速鍵](https://scontent.fkhh1-2.fna.fbcdn.net/v/t39.30808-6/468305056_10221703963427227_1996554154150639433_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=qmIqLdoGHtkQ7kNvgE4Rx6p&_nc_zt=23&_nc_ht=scontent.fkhh1-2.fna&_nc_gid=AmC1nz6prcz1FmI5-WfyrTZ&oh=00_AYBlnVY_crBuetYBRygSHMb20-qP50Spj49tIiiCag8HKw&oe=674CC2D5)
 

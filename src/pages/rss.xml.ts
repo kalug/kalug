@@ -10,7 +10,7 @@ export async function GET() {
     title: SITE.title,
     description: SITE.desc,
     site: SITE.website,
-    items: sortedPosts.map((post) => ({
+    items: sortedPosts.map(post => ({
       link: `posts/${post.id}/`,
       title: post.data.title,
       description: post.data.description,
