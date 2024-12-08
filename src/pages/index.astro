@@ -96,10 +96,10 @@ const description = '由一群熱愛 Linux / open source 的高雄人所組成�
           <section id="featured">
             <h2>Featured</h2>
             <ul>
-              {featuredPosts.map(({ data, slug }) => (
+              {featuredPosts.map((post) => (
                 <Card
-                  href={`/posts/${slug}/`}
-                  frontmatter={data}
+                  href={`/posts/${post.id}/`}
+                  frontmatter={post.data}
                   secHeading={false}
                 />
               ))}
@@ -116,11 +116,11 @@ const description = '由一群熱愛 Linux / open source 的高雄人所組成�
           <h2>Posts - 活動預告兼共筆</h2>
           <ul>
             {recentPosts.map(
-              ({ data, slug }, index) =>
+              (post, index) =>
                 index < SITE.postPerIndex && (
                   <Card
-                    href={`/posts/${slug}/`}
-                    frontmatter={data}
+                    href={`/posts/${post.id}/`}
+                    frontmatter={post.data}
                     secHeading={false}
                   />
                 )

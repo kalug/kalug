@@ -10,11 +10,11 @@ export async function GET() {
     title: SITE.title,
     description: SITE.desc,
     site: SITE.website,
-    items: sortedPosts.map(({ data, slug }) => ({
-      link: `posts/${slug}/`,
-      title: data.title,
-      description: data.description,
-      pubDate: new Date(data.modDatetime ?? data.pubDatetime),
+    items: sortedPosts.map((post) => ({
+      link: `posts/${post.id}/`,
+      title: post.data.title,
+      description: post.data.description,
+      pubDate: new Date(post.data.modDatetime ?? post.data.pubDatetime),
     })),
   });
 }

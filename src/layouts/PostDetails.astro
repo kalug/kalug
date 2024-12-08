@@ -10,6 +10,8 @@ import { slugifyStr } from "@utils/slugify";
 import ShareLinks from "@components/ShareLinks.astro";
 import { SITE } from "@config";
 
+import { render } from 'astro:content';
+
 export interface Props {
   post: CollectionEntry<"blog">;
   posts: CollectionEntry<"blog">[];
@@ -31,7 +33,7 @@ const {
   editPost,
 } = post.data;
 
-const { Content } = await post.render();
+const { Content } = await render(post);
 
 const ogImageUrl = typeof ogImage === "string" ? ogImage : ogImage?.src;
 const ogUrl = new URL(
@@ -55,12 +57,12 @@ const layoutProps = {
 
 /* ========== Prev/Next Posts ========== */
 
-const allPosts = posts.map(({ data: { title }, slug }) => ({
-  slug,
-  title,
+const allPosts = posts.map((post) => ({
+  slug:post.id,
+  title:post.data.title,
 }));
 
-const currentPostIndex = allPosts.findIndex(a => a.slug === post.slug);
+const currentPostIndex = allPosts.findIndex(a => a.slug === post.id);
 
 const prevPost = currentPostIndex !== 0 ? allPosts[currentPostIndex - 1] : null;
 const nextPost =
