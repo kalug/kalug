@@ -72,8 +72,8 @@ export const SOCIALS: SocialObjects = [
   },
   {
     name: "Calendar",
-    href: "https://calendar.google.com/calendar/u/0?cid=OWJkcmZqMGxoY2Rpc3A1cjlkdXB0ZmYwNmNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ",
-    linkTitle: `${SITE.title} on calendar.google`,
+    href: "https://lu.ma/kalug.tw",
+    linkTitle: `${SITE.title} on lu.ma`,
     active: true,
   },
   {
