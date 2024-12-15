@@ -10,6 +10,9 @@ description: 2場線上聚會+1場實體聚會 麻煩使用 https://lu.ma/kalug.
 
 # 2024 12月聚會
 
+[![hackmd-github-sync-badge](https://hackmd.io/lpcCZkdhRR-wu-1u3NUMZw/badge)](https://hackmd.io/lpcCZkdhRR-wu-1u3NUMZw)
+
+
 具體更新詳見 https://lu.ma/kalug.tw
 
 ## 12/17地端自建 Kubernetes(K8s)小宇宙
