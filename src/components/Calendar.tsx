@@ -15,7 +15,7 @@ export default function Calendar() {
         googleCalendarApiKey="AIzaSyCuWMvbJMh8InLaE1Qk8-bHUjJbm8iYvPU"
         events={{
           googleCalendarId:
-            "9bdrfj0lhcdisp5r9duptff06c@group.calendar.google.com",
+            "0lh8h468gpni29ipvg9gicn2ij93ltkc@import.calendar.google.com",
         }}
         //initialView="dayGridMonth"
         initialView="dayGridWeek"
