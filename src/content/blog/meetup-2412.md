@@ -18,6 +18,8 @@ description: 2場線上聚會+1場實體聚會 麻煩使用 https://lu.ma/kalug.
 ## 12/17地端自建 Kubernetes(K8s)小宇宙
 - 線上聚會
 
+https://www.slideshare.net/slideshow/kubernetes-v-s-gke-devfest-taipei-2024/273727315?fbclid=IwY2xjawHOKiZleHRuA2FlbQIxMAABHTxlXDvRyItfV40N5opiRYtGUoiO3rhQ_hGYDhSVNtytX_5ABz5XVJk5og_aem_8UgItx7Z_W2JZ-he0hzM7g#87
+
 ## 12/19 kanru (新酷音開發者) 的新酷音&Rust
 - 線上聚會
 
